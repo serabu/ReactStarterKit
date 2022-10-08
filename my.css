@@ -1,0 +1,97 @@
+body {
+  background-color: #b6bddf;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+}
+.qqqq {
+  background-color: white;
+  height: 100%;
+  overflow: auto;
+  width: 500px;
+}
+.qqqq a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 16px;
+}
+.qqqq a.wwwww {
+  background-color: green;
+  color: white;
+}
+.qqqq a:hover {
+  background-color: grey;
+  color: white;
+}
+.qqqq a.active {
+  background: red;
+  color: white;
+}
+
+
+
+
+
+.eeee {
+  background-color: gray;
+  overflow: hidden;
+}
+.eeee a {
+  text-align: center;
+  display: list;
+  text-decoration: none;
+  color: white;
+  padding: 16px;
+  float: left;
+}
+.eeee a.rrrr {
+  background-color: green;
+  color: white;
+}
+.eeee a.tttt {
+  background-color: gray;
+  color: white;
+ float: right;
+}
+.eeee a:hover {
+  background-color: black;
+  color: white;
+}
+.eeee a.active {
+  background: red;
+  color: white;
+}
+
+
+
+.yyyy {
+  background-color: white;
+  overflow: hidden;
+}
+.yyyy a {
+  text-align: center;
+  display: list;
+  text-decoration: none;
+  color: gray;
+  padding: 16px;
+  float: left;
+}
+.yyyy a.uuuu {
+  background-color: blue;
+  color: white;
+}
+.yyyy a.iiii {
+  background-color: white;
+  color: gray;
+ float: right;
+}
+.yyyy a:hover {
+  background-color: rgb(148, 122, 122);
+  color: white;
+}
+.yyyy a.active {
+  background: red;
+  color: white;
+}
