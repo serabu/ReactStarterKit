@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header">
-      <div class='container'>
+      <div class='header__container'>
         <div class="header__body">
           <a href="#" class="header__logo">
             <img src="logo.jpg" alt="LogoOnHeader">
@@ -18,83 +18,81 @@
           <div class="header__burger" onclick="switchClass()">
             <div class="header__burger__middle"></div>
           </div>
-            <nav class="header_menu_size_m">
+            <nav class="header__menu__size-m">
               <ul class="header__list">
                 <li>
-                  <a href=#Главная class="header__link">Главная</a>
+                  <a href="#Main" class="header__link">Главная</a>
                 </li>
                 <li>
-                  <a href="#О нас" class="header__link">О нас</a>
+                  <a href="#About" class="header__link">О нас</a>
                 </li>
                 <li>
-                  <a href="#Япоские ведра" class="header__link">Японские ведра</a>
+                  <a href="#Japanese" class="header__link">Японские ведра</a>
                   <ul class="header__submenu">
-                   <li> <a href="#">тойота</a></li>
-                   <li> <a href="#">субару</a></li>
-                   <li> <a href="#">хонда</a></li>
+                   <li> <a href="#Toyota">тойота</a></li>
+                   <li> <a href="#Subaru">субару</a></li>
+                   <li> <a href="#Honda">хонда</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#Немецкие ведра" class="header__link">Немецкие ведра</a>
+                  <a href="#German" class="header__link">Немецкие ведра</a>
                   <ul class="header__submenu__first">
-                    <li> <a href="#">Ауди</a></li>
-                    <li> <a href="#">Бемельве</a></li>
-                    <li> <a href="#">Мередес</a></li>
+                    <li> <a href="#Audi">Ауди</a></li>
+                    <li> <a href="#Bmw">Бемельве</a></li>
+                    <li> <a href="#Merc">Мередес</a></li>
                    </ul>
                 </li>
                 <li>
-                  <a href="#Американские ведра" class="header__link">Американские ведра</a>
+                  <a href="#American" class="header__link">Американские ведра</a>
                   <ul class="header__submenu__second">
-                    <li> <a href="#">Шевроле</a></li>
-                    <li> <a href="#">Форд</a></li>
-                    <li> <a href="#">додж</a></li>
+                    <li> <a href="#Shvrole">Шевроле</a></li>
+                    <li> <a href="#Ford">Форд</a></li>
+                    <li> <a href="#Dodge">додж</a></li>
                    </ul>
                 </li>
               </ul>
             </nav>
         </div>
       </div>
-    <nav class="header_menu_size_s" id="switch">
-    <label for="#"> Главная
-    </label>
-    <label for="#"> О нас
-    </label>
+    <nav class="header__menu__size-s">
+    <li> <a href="#main">Главная</a>  
+    </li>
+    <li> <a href="#About">О нас</a>  
+    </li>
     <label for="btn-1">Японские ведра
     </label>
     <input type="checkbox" id="btn-1">
     <ul>
-      <li><a href="#">Хонда</a></li>
-      <li><a href="#">Тойота</a></li>
-      <li><a href="#">Субару</a></li>
+      <li><a href="#Honda">Хонда</a></li>
+      <li><a href="#Toyota">Тойота</a></li>
+      <li><a href="#Subaru">Субару</a></li>
     </ul>
     <label for="btn-2">Немецкие ведра
     </label>
     <input type="checkbox" id="btn-2">
     <ul>
-      <li><a href="#">Ауди</a></li>
-      <li><a href="#">Мередес</a></li>
-      <li><a href="#">Бемельве</a></li>
+      <li><a href="#Audi">Ауди</a></li>
+      <li><a href="#Merc">Мередес</a></li>
+      <li><a href="#Bmw">Бемельве</a></li>
     </ul>
     <label for="btn-3">Американские ведра
     </label>
     <input type="checkbox" id="btn-3">
     <ul>
-      <li><a href="#">Форд</a></li>
-      <li><a href="#">Шевроле</a></li>
-      <li><a href="#">додж</a></li>
+      <li><a href="#Ford">Форд</a></li>
+      <li><a href="#Shevrole">Шевроле</a></li>
+      <li><a href="#Dodge">додж</a></li>
     </ul>
   </nav>
   </div>
 </header>
   <div class="content">
-    <div class="container">
-      <div class="container__text">
+      <div class="content__text">
         <p>
           Дви́гатель вну́треннего сгора́ния (ДВС) — разновидность теплового двигателя, в котором топливная смесь сгорает непосредственно в рабочей камере (внутри) двигателя. Продукты сгорания образуют рабочее тело. Такой двигатель является первичным, химическим, и преобразует энергию сгорания топлива в механическую работу[1]. Существует большое число разнообразных двигателей с внутренним сгоранием, отличающихся назначением, способом отдачи мощности, и другими параметрами.
 Мощные и лёгкие, двигатели внутреннего сгорания позволили создать не существовавшие до этого виды транспорта[2] (автомобиль, мотоцикл, винтовой и реактивный самолёты, вертолёт, ракету, космический корабль, газотурбоход, судно на воздушной подушке), улучшить экономичность и экологичность[3] корабельных силовых установок и локомотивов. Моторизация привела к ускорению темпа жизни людей, возникновению целой автомобильной культуры (США); в военном деле позволила разработать необычайно разрушительные машины смерти (танк, истребитель, бомбардировщик, ракеты с обычной и ядерной боеголовкой, подводную лодку с торпедами и другие)[4]. Альтернативное семейство двигателей внешнего сгорания имеет раздельное топливо и рабочее тело, обуславливающее необходимость сравнительно медленной передачи тепла сгорания от продуктов сгорания рабочему телу — поэтому их удельная мощность значительно ниже.
         </p>
       </div>
-    </div>
   </div>
 </body>
 </html>
