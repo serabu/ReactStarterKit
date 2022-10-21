@@ -1,4 +1,4 @@
 function switchClass() {
-  const element = document.querySelector(".header__menu__size-s");
+  const element = document.querySelector(".row");
     element.classList.toggle("active");
 }

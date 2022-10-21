@@ -8,84 +8,55 @@
   <script src="app.js"></script>
   <title>document</title>
 </head>
-<body>
-    <header class="header">
-      <div class='header__container'>
-        <div class="header__body">
-          <a href="#" class="header__logo">
-            <img src="logo.jpg" alt="LogoOnHeader">
-          </a>
-          <div class="header__burger" onclick="switchClass()">
-            <div class="header__burger__middle"></div>
-          </div>
-            <nav class="header__menu__size-m">
-              <ul class="header__list">
-                <li>
-                  <a href="#Main" class="header__link">Главная</a>
-                </li>
-                <li>
-                  <a href="#About" class="header__link">О нас</a>
-                </li>
-                <li>
-                  <a href="#Japanese" class="header__link">Японские ведра</a>
-                  <ul class="header__submenu">
-                   <li> <a href="#Toyota">тойота</a></li>
-                   <li> <a href="#Subaru">субару</a></li>
-                   <li> <a href="#Honda">хонда</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#German" class="header__link">Немецкие ведра</a>
-                  <ul class="header__submenu__first">
-                    <li> <a href="#Audi">Ауди</a></li>
-                    <li> <a href="#Bmw">Бемельве</a></li>
-                    <li> <a href="#Merc">Мередес</a></li>
-                   </ul>
-                </li>
-                <li>
-                  <a href="#American" class="header__link">Американские ведра</a>
-                  <ul class="header__submenu__second">
-                    <li> <a href="#Shvrole">Шевроле</a></li>
-                    <li> <a href="#Ford">Форд</a></li>
-                    <li> <a href="#Dodge">додж</a></li>
-                   </ul>
-                </li>
-              </ul>
-            </nav>
-        </div>
-      </div>
-    <nav class="header__menu__size-s">
-    <li> <a href="#main">Главная</a>  
-    </li>
-    <li> <a href="#About">О нас</a>  
-    </li>
-    <label for="btn-1">Японские ведра
-    </label>
-    <input type="checkbox" id="btn-1">
-    <ul>
-      <li><a href="#Honda">Хонда</a></li>
-      <li><a href="#Toyota">Тойота</a></li>
-      <li><a href="#Subaru">Субару</a></li>
+<body class="base">
+<header class="header">
+<div class="contacts">
+  <div class="header__container">
+    <ul class="columns__wrapper">
+    <div class="columns">
+      <a class="columns__text" href="#main">Главная</a>
+      <a class="columns__text" href="#About">О нас</a>
+      <a href="#" class="header__logo">
+        <img class="logo__img" src="logo.jpg" alt="LogoOnHeader">
+      </a>
     </ul>
-    <label for="btn-2">Немецкие ведра
-    </label>
-    <input type="checkbox" id="btn-2">
-    <ul>
-      <li><a href="#Audi">Ауди</a></li>
-      <li><a href="#Merc">Мередес</a></li>
-      <li><a href="#Bmw">Бемельве</a></li>
-    </ul>
-    <label for="btn-3">Американские ведра
-    </label>
-    <input type="checkbox" id="btn-3">
-    <ul>
-      <li><a href="#Ford">Форд</a></li>
-      <li><a href="#Shevrole">Шевроле</a></li>
-      <li><a href="#Dodge">додж</a></li>
-    </ul>
-  </nav>
+    </div>
   </div>
+</div>
+<div class="row">
+  <a class="row__nav" href="#home">Главная</a>
+  <a class="row__nav" href="#home">О нас</a>
+  <div class="row__container">
+    <button class="columns">Немецкие
+    </button>
+    <div class="columns__submenu">
+      <a class="columns__link" href="#Audi">Ауди</a>
+      <a class="columns__link" href="#Bmw"> Бэмельве</a>
+      <a class="columns__link" href="#Merc">Мерседес</a>
+    </div>
+  </div> 
+      <div class="row__container">
+      <button class="columns">Японские 
+      </button>
+      <div class="columns__submenu">
+        <a class="columns__link" href="#Honda">Хонда</a>
+        <a class="columns__link" href="#Toyota">Тойота</a>
+        <a class="columns__link" href="#Subaru">Субару</a>
+      </div>
+  </div> 
+    <div class="row__container">
+    <button class="columns">Американские 
+    </button>
+    <div class="columns__submenu">
+      <a class="columns__link" href="#Ford">Форд</a>
+      <a class="columns__link" href="#Dodge">Додж</a>
+      <a class="columns__link" href="#Shevrole">Шевроле</a>
+    </div>
+  </div> 
+  <a href="#icon"  class="icon" onclick="switchClass()">&#9776;</a>
+</div>
 </header>
+<main>
   <div class="content">
       <div class="content__text">
         <p>
@@ -94,5 +65,9 @@
         </p>
       </div>
   </div>
+</main>
+  <footer class="footer">
+
+  </footer>
 </body>
 </html>
