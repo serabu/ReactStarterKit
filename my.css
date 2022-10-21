@@ -42,6 +42,7 @@ table {
 }
 
 
+
 .base {
   background-color: #222;
   color: white;
@@ -58,15 +59,18 @@ margin-bottom: 40px;
   background-color: brown;
   overflow: hidden;
 }
-.header__container {
-
+.contacts__container {
+  width: 100%;
+  max-width: 1200px; 
+  justify-content: left;
+  margin: 0 auto;
 }
-.columns {
-display: block;
-}
-.columns__wrapper {
-  
-  
+.row__container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px; 
+  justify-content: center;
+ 
 }
 .columns__text {
   float: left;
@@ -77,7 +81,8 @@ display: block;
   font-size: 26px; 
 }
 .header__logo {
-  float: right;
+  display: flex;
+  float: left;
   height: 48px;
   width: 48px;
   border-radius: 80%;
@@ -91,31 +96,22 @@ display: block;
   overflow: hidden;
   background-color: #333;
 }
-.row__nav {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+
 .row .icon {
   display: none;
 }
-.row__container {
+.columns {
   float: left;
   overflow: hidden;
 }
 
-.row__container .columns {
+.columns .columnsbtn {
   font-size: 17px;    
   border: none;
   outline: none;
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit;
   margin: 0;
 }
 
@@ -135,23 +131,28 @@ display: block;
   text-align: left;
 }
 
-.columns__link:hover, .row__container:hover .columns {
-  background-color: #555;
+.columns__link:hover, .columns:hover, .columnsbtn:hover, .columns__text:hover {
+  background-color: black;
   color: white;
 }
 
-.row__container:hover .columns__submenu {
+.columns:hover .columns__submenu {
   display: block;
 }
 
 @media screen and (max-width:767px) {
-  .row a:not(:first-child), .columns {
+  .row a:not(:first-child),  .columns, .contacts__container  {
     display: none;
   }
+  .row__container {
+    display: block;
+  }
   .row a.icon {
-    font-size: 15px;
+    font-size: 50px;
+    color: white;
     float: right;
     display: block;
+    text-decoration: none;
   }
   .row.active {
     position: relative;
