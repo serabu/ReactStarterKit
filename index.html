@@ -4,66 +4,72 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="grid.css">
   <link rel="stylesheet" href="my.css">
   <script src="app.js"></script>
   <title>document</title>
 </head>
-<body class="base">
-<header class="header">
-<div class="contacts">
-  <div class="contacts__container">
-      <a class="columns__text" href="#main">Главная</a>
-      <a class="columns__text" href="#About">О нас</a>
-  </div>
-</div>
-<div class="row">
-  <a href="#" class="header__logo">
-    <img class="logo__img" src="logo.jpg" alt="LogoOnHeader">
-  </a>  
-  <div class="row__container"> 
-    <div class="columns">
-      <button class="columnsbtn">Немецкие
-      </button>
-      <div class="columns__submenu">
-        <a class="columns__link" href="#Audi">Ауди</a>
-        <a class="columns__link" href="#Bmw"> Бэмельве</a>
-        <a class="columns__link" href="#Merc">Мерседес</a>
-      </div>
-    </div> 
-        <div class="columns">
-        <button class="columnsbtn">Японские 
-        </button>
-        <div class="columns__submenu">
-          <a class="columns__link" href="#Honda">Хонда</a>
-          <a class="columns__link" href="#Toyota">Тойота</a>
-          <a class="columns__link" href="#Subaru">Субару</a>
-        </div>
-    </div> 
-      <div class="columns">
-      <button class="columnsbtn">Американские 
-      </button>
-      <div class="columns__submenu">
-        <a class="columns__link" href="#Ford">Форд</a>
-        <a class="columns__link" href="#Dodge">Додж</a>
-        <a class="columns__link" href="#Shevrole">Шевроле</a>
-      </div>
-    </div> 
-    <a href="#icon"  class="icon" onclick="switchClass()">&#9776;</a>
-  </div>
-</div>
-</header>
-<main>
-  <div class="content">
-      <div class="content__text">
-        <p>
-          Дви́гатель вну́треннего сгора́ния (ДВС) — разновидность теплового двигателя, в котором топливная смесь сгорает непосредственно в рабочей камере (внутри) двигателя. Продукты сгорания образуют рабочее тело. Такой двигатель является первичным, химическим, и преобразует энергию сгорания топлива в механическую работу[1]. Существует большое число разнообразных двигателей с внутренним сгоранием, отличающихся назначением, способом отдачи мощности, и другими параметрами.
-Мощные и лёгкие, двигатели внутреннего сгорания позволили создать не существовавшие до этого виды транспорта[2] (автомобиль, мотоцикл, винтовой и реактивный самолёты, вертолёт, ракету, космический корабль, газотурбоход, судно на воздушной подушке), улучшить экономичность и экологичность[3] корабельных силовых установок и локомотивов. Моторизация привела к ускорению темпа жизни людей, возникновению целой автомобильной культуры (США); в военном деле позволила разработать необычайно разрушительные машины смерти (танк, истребитель, бомбардировщик, ракеты с обычной и ядерной боеголовкой, подводную лодку с торпедами и другие)[4]. Альтернативное семейство двигателей внешнего сгорания имеет раздельное топливо и рабочее тело, обуславливающее необходимость сравнительно медленной передачи тепла сгорания от продуктов сгорания рабочему телу — поэтому их удельная мощность значительно ниже.
-        </p>
-      </div>
-  </div>
-</main>
-  <footer class="footer">
+<body>
 
-  </footer>
+  <div class="container">
+    <header>
+      <div class="row">
+        <div class="col">
+            <div class="header">
+              <nav class="header__menu">
+                <ul class="header__menu_list">
+                  <li class="header__menu_list_item header__menu_list_item--active">
+                    <a href="#" class="[ header__menu_list-link ] [ flex alin-center jt-b ]">
+                      <span class="header__menu_list_text">Item 1</span>
+                      <i>icon-list</i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+        <div class="col">
+          <div class="float-right">
+            <div class="your_class">Col</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="float-right">
+            <div class="your_class">Col</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        test
+      </div>
+    </header>
+    <section>
+      test 2
+    </section>
+    <footer>
+      <div class="row-footer">
+        <div class="col-6">
+          <nav>
+            <ul>
+              <li>
+                <a href=""><span>Item 1</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-6">Test col</div>
+      </div>
+    </footer>
+  </div>
+  <script>
+
+    const arrUsersName = [];
+
+    const getAllUsers = (id) => {
+      return this.serviceUsers.getUsers(id);
+    }
+
+  </script>
+
 </body>
 </html>
