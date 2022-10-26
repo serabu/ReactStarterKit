@@ -1,0 +1,36 @@
+body {
+  background-color: gray;
+}
+
+.container {
+  background-color: #efeff1;
+}
+
+.header__menu {
+  background-color: #333
+}
+
+.header__link {
+  color: black;
+}
+
+.header__link-text {
+  color: white;
+}
+
+.header__link-submenu {
+  color: black;
+}
+
+.dropdown {
+  background-color: white;
+}
+
+.header__link-text:hover {
+  background-color: #555;
+  color: white;
+}
+
+.header__link-submenu:hover {
+  color: red;
+}
