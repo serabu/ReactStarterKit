@@ -22,7 +22,7 @@ body {
   color: black;
 }
 
-.dropdown {
+.menu__list-dropdown {
   background-color: white;
 }
 
@@ -33,4 +33,8 @@ body {
 
 .header__link-submenu:hover {
   color: red;
+}
+
+.icon {
+  color: white;
 }
