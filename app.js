@@ -1,34 +1,31 @@
 
-const select = document.querySelector('select');
-const allLang = ['en', 'ru'];
-select.addEventListener('change', changeURLLanguage);
+const footerContent = {
+ru: "Главная",
+en: "Home ", 
 
-function changeURLLanguage() {
-    let lang = select.value;
-    location.href = window.location.pathname + '#' + lang;
-    location.reload();
 }
+console.log(footerContent)
 
-function changeLanguage() {
-    let hash = window.location.hash;
-    hash = hash.substr(1);
-    // console.log(hash);
-    if (!allLang.includes(hash)) {
-        location.href = window.location.pathname + '#ru';
-        location.reload();
-    }
-    select.value = hash;
-    document.querySelector('title').innerHTML = langArr['home'][hash];
-    for (let key in langArr) {
-        let elem = document.querySelector('.lng-' + key);
-        if (elem) {
-            elem.innerHTML = langArr[key][hash];
-        }
+// const select = document.querySelector('select')
+//     select.addEventListener('change', function(){
+//         let listener = document.querySelector('.header__link-text')
+//         listener.innerHTML = footerContent.en
+//         console.log(select)
+//     })
+        
+    
+const selectElement = document.querySelector('.change-lang');
 
-    }
-}
+selectElement.addEventListener('change', (event) => {
+  const result = document.querySelector('.header__link-text');
+  result.textContent = ` ${event.target.value}`;
+});
 
-changeLanguage();
+
+
+
+
+
 
 function switchClass() {
   const element = document.querySelector(".menu__list");
