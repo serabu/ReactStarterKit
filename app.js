@@ -1,26 +1,81 @@
 
-const footerContent = {
-ru: "Главная",
-en: "Home ", 
-
+const pageContent = {
+   headertext: {
+      home: {
+          ru: 'Главная',
+          en: 'Home',
+      },
+      products: {
+        ru: 'Продукция',
+        en: 'Products',
+    },
+    about: {
+      ru: 'нас',
+      en: 'About',
+    },
+    germ: {
+    ru: 'Немецкие',
+    en: 'German',
+    },
+    amer: {
+    ru: 'Американские',
+    en: 'American',
+    },
+    japan: {
+    ru: 'Японские',
+    en: 'Japanese',
+    },
+    gall: {
+    ru: 'Галерея',
+    en: 'Gallery',
+    },
+    cont: {
+    ru: 'Контакты',
+    en: 'Contacts',
+    },
+  },
+  bodytext: {
+            divText: {
+                ru: 'Бла бла бла',
+                en: 'Bla bla bla',
+            },
+          },
+      footertext: {
+            ru: 'Футер текст',
+            en: 'Footer text',
+      },
+    
 }
-console.log(footerContent)
 
-// const select = document.querySelector('select')
-//     select.addEventListener('change', function(){
-//         let listener = document.querySelector('.header__link-text')
-//         listener.innerHTML = footerContent.en
-//         console.log(select)
-//     })
-        
+const { headertext: {home, products, about, germ, amer, japan, gall, cont} } = pageContent
+
+ console.log(home)
+// const pageindex = pageContent.reduce((accumulator, currentValue) => {
+//   return currentValue.products
+// })
+
+// let trydata = document.querySelector('.header__link-text')
+// trydata.dataset.innerHTML = ''
+// console.log(shit)
+
+// console.log(pageindex)
+// const pagefind = pageContent.map(pageContent => pageContent.home)
+
+
+// console.log(pagefind)
     
 const selectElement = document.querySelector('.change-lang');
 
 selectElement.addEventListener('change', (event) => {
-  const result = document.querySelector('.header__link-text');
-  result.textContent = ` ${event.target.value}`;
+  const dom = document.querySelector('.header__link-text');
+  const product = document.querySelector('.prod');
+  const abouttext = document.querySelector('.about');
+  dom.textContent = home[event.target.value];
+  product.textContent = products[event.target.value];
+  abouttext.textContent = about[event.target.value];
+  
 });
-
+selectElement.removeEventListener('change', Event )
 
 
 
