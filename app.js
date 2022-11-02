@@ -53,13 +53,6 @@ const swapMenuElements = (event) => {
 }
 selectElement.addEventListener('change', swapMenuElements, true);
 
-
-
-
-
-
-
-
 function switchClass() {
   const element = document.querySelector(".menu__list");
   element.classList.toggle("active");
