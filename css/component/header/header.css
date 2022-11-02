@@ -8,61 +8,8 @@
   background-color: #333
 }
 
-.menu__list {
-  float: left;
-  overflow: hidden;
-  display: flex;
-}
-
-.menu__list-item {
-  padding: 14px 16px;
-}
-
-.header__link {
-text-decoration: none;
-color: black;
-
-}
-
-.header__link-text {
-  padding: 14px 30px;
-  color: white;
-}
-
-.submenu {
-  padding: 1px 0;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  color: black;
-  margin: 10px 0 10px 10px;
-}
-
-.menu__list-dropdown {
-  background-color: white ;
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  margin-top: 14px;
-}
-
-.menu__list-item:hover .menu__list-dropdown {
-  display: block;
-}
-
-.icon {
-  display: none;
-}
-
-.text:hover {
-  background-color: #555;
-  color: white;
-}
-
-.submenu:hover {
-  color: red;
-}
-
-.icon {
-  color: white;
+@media (max-width: 767px) {
+  .header__menu {
+    padding-bottom: 14px;
+  }
 }
