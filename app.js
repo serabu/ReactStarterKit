@@ -1,5 +1,7 @@
+const selectElement = document.querySelector(".footer__select");
+const menu = document.querySelectorAll('.menu__link-text');
 const pageContent = {
-  Headertext: {
+  headerContent: {
     home: {
       ru: "Главная",
       en: "Home",
@@ -37,35 +39,19 @@ const pageContent = {
       },
     },
   },
-  bodytext: {
-    divText: {
-      ru: "Бла бла бла",
-      en: "Bla bla bla",
-    },
-    footertext: {
-      ru: "Футер текст",
-      en: "Footer text",
-    },
-  },
 };
 
-
-const selectElement = document.querySelector(".footer__select");
-const menu = document.querySelectorAll('.header__link-text, .header__link-submenu');
-
-
 const swapMenuElements = (event) => {
-  const MenuLinks = [...menu]
+  const MenuLinks = [...menu];
   MenuLinks.map(element => {
     const { change } = element.dataset
-    const Parentalrow = element.closest('.menu__list-item')?.querySelector('a span').dataset.change
-    const value = pageContent.Headertext[change]
-      ? pageContent.Headertext[change][event.target.value]
-      : pageContent.Headertext[Parentalrow].children[change][event.target.value]
-    element.textContent = value
-  })
+    const parent = element.closest('.menu__list-item')?.querySelector('.menu__link .menu__link-text').dataset.change
+    element.textContent = pageContent.headerContent[change]
+      ? pageContent.headerContent[change][event.target.value]
+      : pageContent.headerContent[parent].children[change][event.target.value]
+  });
 }
-selectElement.addEventListener('change', swapMenuElements, true)
+selectElement.addEventListener('change', swapMenuElements, true);
 
 
 

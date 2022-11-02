@@ -2,91 +2,94 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/index.css" />
-  <title>document</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <title>document</title>
 </head>
 
 <body>
-  
-    <div class="container">
-      <header class="header">
+<div class="container">
+    <header class="header">
         <div class="row">
-          <div class="col-12">
-            <nav class="header__menu">
-              <ul class="menu__list">
-                <li class="menu__list-item ">
-                  <a href="#" class="header__link">
-                    <span class="header__link-text" data-change="home">Главная</span>
-                  </a>
-                </li>
-                <li class="menu__list-item ">
-                  <a href="#" class="header__link">
-                    <span class="header__link-text texthover" data-change="products">Продукция</span>
-                    <ul class="menu__list-dropdown">
-                      <a href="#" class="header__link">
-                        <span class="header__link-text header__link-submenu" data-change="germ">Немецкие</span>
-                      </a>
-                      <a href="#" class="header__link ">
-                        <span class="header__link-text header__link-submenu" data-change="amer">Американские</span>
-                      </a>
-                      <a href="#" class="header__link ">
-                        <span class="header__link-text header__link-submenu" data-change="japan">Японские</span>
-                      </a>
-                    </ul>
-                  </a>
-                </li>
-                <li class="menu__list-item">
-                  <a href="#" class="header__link">
-                    <span class="header__link-text texthover" data-change="about">О нас</span>
-                    <ul class="menu__list-dropdown">
-                      <a href="#" class="header__link ">
-                        <span class="header__link-text header__link-submenu" data-change="gall">Галерея</span>
-                      </a>
-                      <a href="#" class="header__link ">
-                        <span class="header__link-text header__link-submenu" data-change="cont">Контакты</span>
-                      </a>
-                    </ul>
-                  </a>
-                </li>
-                <a href="#" class="icon" onclick="switchClass()">&#9776;</a>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </header>
-      <main class="main">
-        <div class="row">
-          <div class="col-12">
-            <p class="footer-text">
+            <div class="col-12">
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__link">
+                                <span class="menu__link-text" data-change="home">Главная</span>
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__link">
+                                <span class="menu__link-text menu__link-text--light"
+                                      data-change="products">Продукция</span>
+                                <ul class="menu__list-dropdown">
 
-            </p>
-          </div>
+                                    <li class="menu__list-item">
+                                        <a href="#" class="menu__link">
+                                            <span class="menu__link-text menu__link-text--hover-red" data-change="germ">Немецкие</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__list-item">
+                                        <a href="#" class="menu__link ">
+                                            <span class="menu__link-text menu__link-text--hover-red" data-change="amer">Американские</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__list-item">
+                                        <a href="#" class="menu__link">
+                                            <span class="menu__link-text menu__link-text--hover-red"
+                                                  data-change="japan">Японские</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__link">
+                                <span class="menu__link-text menu__link-text--light" data-change="about">О нас</span>
+                                <ul class="menu__list-dropdown">
+                                    <li class="menu__list-item">
+                                        <a href="#" class="menu__link ">
+                                            <span class="menu__link-text menu__link-text--hover-red" data-change="gall">Галерея</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__list-item">
+                                        <a href="#" class="menu__link ">
+                                            <span class="menu__link-text menu__link-text--hover-red" data-change="cont">Контакты</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <a href="#" class="icon" onclick="switchClass()">&#9776;</a>
+                    </ul>
+                </nav>
+            </div>
         </div>
-      </main>
-      <footer class="footer">
+    </header>
+    <footer class="footer">
         <div class="row">
-          <div class="col-6">
-            <form action="swaplang">
-              <select class="footer__select">
-                <option value="ru">Ru</option>
-                <option value="en">Eng</option>
-              </select>
-            </form>
-          </div>
-          <div class="col-6">
-            <a href="#" class="footer__logo">
-              <img class="footer__logo-img" src="logo.jpg" alt="Logo picture" />
-            </a>
-          </div>
+            <div class="col-6">
+                <form action="#">
+                    <select class="footer__select">
+                        <option value="ru">Ru</option>
+                        <option value="en">Eng</option>
+                    </select>
+                </form>
+            </div>
+            <div class="col-6">
+                <a href="#" class="footer__logo">
+                    <img class="footer__logo-img" src="logo.jpg" alt="Logo picture"/>
+                </a>
+            </div>
         </div>
-      </footer>
-    </div>
-  
-  <script src="lang.js"></script>
-  <script src="app.js"></script>
+    </footer>
+</div>
+
+<script src="lang.js"></script>
+<script src="app.js"></script>
 </body>
 
 </html>
