@@ -56,15 +56,13 @@ const menu = document.querySelectorAll('.header__link-text, .header__link-submen
 
 const swapMenuElements = (event) => {
   const MenuLinks = [...menu]
-  console.log(menu)
   MenuLinks.map(element => {
     const { change } = element.dataset
-    const Parentalrow = element.closest('.header__menu')?.querySelector('.header__link, .header__link-text').dataset.change
+    const Parentalrow = element.closest('.menu__list-item')?.querySelector('.header__link span, .header__link-text').dataset.change
     const value = pageContent.Headertext[change]
     ? pageContent.Headertext[change][event.target.value]
     : pageContent.Headertext[Parentalrow].children[change][event.target.value]
     element.textContent = value
-    console.log(Parentalrow)
   })
 }
 selectElement.addEventListener('change', swapMenuElements, true )

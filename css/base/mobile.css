@@ -7,13 +7,20 @@
 .header__menu{
 padding-bottom: 14px;
 }
+
+.menu__list-item {
+  padding: 0;
+  margin: 10px 0 20px 0;
+}
   
 .menu__list.active .header__link-text {
   display: block;
+  
 }
 
 .menu__list.active .menu__list-dropdown {
   position: relative;
+
 }
 
 .icon {
