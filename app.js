@@ -50,7 +50,7 @@ const pageContent = {
 };
 
 
-const selectElement = document.querySelector("select");
+const selectElement = document.querySelector(".footer__select");
 const menu = document.querySelectorAll('.header__link-text, .header__link-submenu');
 
 
@@ -58,7 +58,7 @@ const swapMenuElements = (event) => {
   const MenuLinks = [...menu]
   MenuLinks.map(element => {
     const { change } = element.dataset
-    const Parentalrow = element.closest('.menu__list-item')?.querySelector('.header__link span, .header__link-text').dataset.change
+    const Parentalrow = element.closest('.menu__list-item')?.querySelector('a span').dataset.change
     const value = pageContent.Headertext[change]
       ? pageContent.Headertext[change][event.target.value]
       : pageContent.Headertext[Parentalrow].children[change][event.target.value]
