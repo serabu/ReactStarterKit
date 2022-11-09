@@ -53,7 +53,27 @@ const swapMenuElements = (event) => {
 }
 selectElement.addEventListener('change', swapMenuElements, true);
 
+
+
 function switchClass() {
   const element = document.querySelector(".menu__list");
   element.classList.toggle("active");
 }
+
+let slideIndex = 1
+slideShow(slideIndex)
+
+function toggleSlide(num) {
+  slideShow(slideIndex += num)
+}
+
+function slideShow(num) {
+ let picture
+ let slides = document.querySelectorAll('.slideshow__slide')
+ if (num > slides.length) {slideIndex = 1}
+ if (num < 1) {slideIndex = slides.length}
+ for (picture = 0; picture < slides.length; picture++) {
+  slides[picture].style.display = "none"
+ }
+ slides[slideIndex-1].style.display = "block"
+}0
