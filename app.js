@@ -45,7 +45,7 @@ const swapMenuElements = (event) => {
   const MenuLinks = [...menu];
   MenuLinks.map(element => {
     const { change } = element.dataset
-    const parent = element.closest('.menu__list-item')?.querySelector('.menu__link .menu__link-text').dataset.change
+    const parent = element.closest('[data-order=parent]')?.querySelector('.menu__link .menu__link-text').dataset.change
     element.textContent = pageContent.headerContent[change]
       ? pageContent.headerContent[change][event.target.value]
       : pageContent.headerContent[parent].children[change][event.target.value]
