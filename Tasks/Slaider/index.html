@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css" />
+  <link rel="stylesheet" href="./main.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <main class="main">
+    <div class="container">
+      <div class="row">
+        <div class="slideShow" id="slider-1" role="list">
+          <div class="slideShow__wrapper" role="listbox">
+            <ul class="slideShow__container"  role="listbox">
+              <li class="slideShow__slide"><img class="slideShow__carPicture" src="./carphoto/bmw.jpg"
+                  aria-label="На фото бемельве "></li>
+              <li class="slideShow__slide"><img class="slideShow__carPicture" src="./carphoto/mercedes.jpg"
+                  aria-label="На фото мерседес"></li>
+              <li class="slideShow__slide"><img class="slideShow__carPicture" src="./carphoto/audi.jpg"
+                  aria-label="На фото ауди"></li>
+              <li class="slideShow__slide"><img class="slideShow__carPicture" src="./carphoto/chevrolet.jpg"
+                  aria-label="На фото шевроле"></li>
+              <li class="slideShow__slide"><img class="slideShow__carPicture" src="./carphoto/dodge.jpg"
+                  aria-label="На фото додж"></li>
+              <li class="slideShow__slide"><img class="slideShow__carPicture" src="./carphoto/ford.jpg"
+                  aria-label="На фото форд"></li>
+              <li class="slideShow__slide"><img class="slideShow__carPicture" src="./carphoto/toyota.jpg"
+                  aria-label="На фото тойота"></li>
+              <li class="slideShow__slide"><img class="slideShow__carPicture" src="./carphoto/subaru.jpg"
+                  aria-label="На фото субару"></li>
+              <li class="slideShow__slide"><img class="slideShow__carPicture" src="./carphoto/honda.jpg"
+                  aria-label="На фото хонда"></li>
+              <li class="slideShow__slide"><img class="slideShow__carPicture" src="./carphoto/accord.jpeg"
+                  aria-label="На фото хонда аккорд"></li>
+            </ul>
+          </div>
+          <div class="slideShowPanel" role="tablist">
+            <button class="slideShow__button slideShow__button--back" aria-label="Предыдущий слайд" role="button"
+              tabindex="1">PREVIOUS SLIDE</button>
+            <button class="slideShow__button slideShow__button--next" aria-label="Следующий слайд" role="button"
+              tabindex="2">NEXT SLIDE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
