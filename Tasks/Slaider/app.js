@@ -17,8 +17,6 @@ const initSlider = (slider, option) => {
   const widthSlide = slider.querySelector('.slideShow__slide').offsetWidth;
   const buttonRight = slider.querySelector('.slideShow__button--next');
   const buttonLeft = slider.querySelector('.slideShow__button--back');
-
-
   const availableSlidesCount = Math.round((slider.offsetWidth - 200) / widthSlide);
   const { count, dots = true, responsible = true } = option;
   const checkCounts = count < availableSlidesCount ? count : availableSlidesCount;
@@ -30,7 +28,6 @@ const initSlider = (slider, option) => {
     const dotsWrapper = document.createElement('div');
     dotsWrapper.classList.add('slideShow__dots');
     sliderContainer.appendChild(dotsWrapper);
-
 
     for (let i = 0; i < dotsCount; i++) {
       const dot = document.createElement('div');
