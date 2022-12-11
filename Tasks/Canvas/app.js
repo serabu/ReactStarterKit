@@ -4,16 +4,32 @@ canvas.height = window.innerHeight;
 
 const c = canvas.getContext('2d');
 
+const colorsArray = [];
+for (let i = 0; i < 100; i++) {
+    const r = Math.floor(Math.random() * (256))
+    const g = Math.floor(Math.random() * (256))
+    const b = Math.floor(Math.random() * (256))
+    colorsArray.push('#' + r.toString(16) + g.toString(16) + b.toString(16));
+}
+
+// function randomInteger(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+function arrayRandElement(arr) {
+    const rand = Math.floor(Math.random() * arr.length);
+    return arr[rand];
+}
 
 class Bubbles {
-    constructor(name, color) {
-        this.name = name
+    constructor() {
+        this.name = "bubbles"
         this.x = Math.random() * (innerWidth - 100 * 2) + 100;
         this.y = Math.random() * (innerHeight - 100 * 2) + 100;
         this.xSpeed = (Math.random() - 0.5) * 2;
         this.ySpeed = (Math.random() - 0.5) * 2;
         this.radius = 100;
-        this.color = color
+        this.color = arrayRandElement(colorsArray)
     }
     draw() {
         c.beginPath();
@@ -37,13 +53,13 @@ class Bubbles {
 }
 
 class Triangle {
-    constructor(name, color) {
-        this.name = name
+    constructor() {
+        this.name = "triangle"
         this.x = Math.random() * (innerWidth - 100 * 2) + 100;
         this.y = Math.random() * (innerHeight - 100 * 2) + 100;
         this.xSpeed = (Math.random() - 0.5) * 2;
         this.ySpeed = (Math.random() - 0.5) * 2;
-        this.color = color
+        this.color = arrayRandElement(colorsArray)
     }
     draw() {
         c.beginPath();
@@ -70,15 +86,15 @@ class Triangle {
 }
 
 class Square {
-    constructor(name, color) {
-        this.name = name
+    constructor() {
+        this.name = "square"
         this.x = Math.random() * (innerWidth - 100 * 2) + 100;
         this.y = Math.random() * (innerHeight - 100 * 2) + 100;
         this.xSpeed = (Math.random() - 0.5) * 2;
         this.ySpeed = (Math.random() - 0.5) * 2;
         this.width = 100;
         this.height = 100;
-        this.color = color
+        this.color = arrayRandElement(colorsArray)
     }
     draw() {
         c.beginPath();
@@ -101,45 +117,38 @@ class Square {
     }
 }
 
-class SpawFactory {
-    static list = {
-        bubbles: Bubbles,
-        triangle: Triangle,
-        square: Square
-    }
-    create(name, type = "bubbles") { 
-        const Conveyer = SpawFactory.list[type] || SpawFactory.list.bubbles;
-        const fabric = new Conveyer(name)
-        fabric.define([
-            'require',
-            'dependency'
-        ], function(require, factory) {
-            'use strict';
-            
-        });
-        return fabric
+const SpawFactory = {
+    createFigure: function (type) {
+        switch (type) {
+            case "bubbles":
+                return new Bubbles()
+            case "triangle":
+                return new Triangle()
+            case "square":
+                return new Square()
+            default:
+                return null
+        }
     }
 }
 
 
+// const bubbles = SpawFactory.createFigure("bubbles") 
+// const triangle = SpawFactory.createFigure("triangle") 
+// const square = SpawFactory.createFigure("square")
 
-function randomInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
-const colorsArray = [];
-for (let i = 0; i < 100; i++) {
-    const r = Math.floor(Math.random() * (256))
-    const g = Math.floor(Math.random() * (256))
-    const b = Math.floor(Math.random() * (256))
-    colorsArray.push('#' + r.toString(16) + g.toString(16) + b.toString(16));
-}
+
+
+
 
 const spawnArray = [];
+console.log(spawnArray);
 
-for (let i = 0; i < 20; i++) {
-    const colorIndex = randomInteger(1, spawnArray.length);
-    spawnArray.push(new Triangle(name, colorsArray[colorIndex]), new Bubbles(name, colorsArray[colorIndex]), new Square(name, colorsArray[colorIndex]));
+
+for (let i = 0; i < 3; i++) {
+    spawnArray.push(SpawFactory.createFigure("bubbles"), SpawFactory.createFigure("triangle"), SpawFactory.createFigure("square")
+    );
 }
 
 function animate() {
