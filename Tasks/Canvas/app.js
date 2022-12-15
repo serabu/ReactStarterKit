@@ -1,4 +1,4 @@
-import { removeFigure, randomColor, arrayRandElement, collectDraw, animate, collect, explosion, findeFigure, findPos} from "./moduls/helper.js";
+import { removeFigure, randomColor, arrayRandElement, collectDraw, animate, collect, explosion, findeFigure, findPos} from "./shapes/helper.js";
 const canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
