@@ -8,6 +8,7 @@ class Shape {
     this.width = width;
     this.height = height;
     this.speed = (Math.random() - 0.5) * 2
+    this.radius = 50
   }
 }
 
@@ -24,36 +25,32 @@ class Rectangle extends Shape {
       ctx.fillRect(this.x, this.y, this.width, this.height);
       if (this.width > 150) {
         this.speed = -this.speed;
-    }
-    if (this.width < 50) {
+      }
+      if (this.width < 50) {
         this.speed = -this.speed;
-    }
-    this.width += this.speed;
-    this.height += this.speed
+      }
+      this.width += this.speed;
+      this.height += this.speed
     };
   }
-        
-        
-            
-        
-  
 }
 //TODO
 class Circle extends Shape {
   constructor() {
     super([arguments])
     this.createShape = () => {
-      const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
       ctx.beginPath();
-              ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-              ctx.stroke();
-              ctx.fillStyle = randomColor;
-              ctx.fill();
-      // ctx.lineWidth = 5;
-      // ctx.beginPath();
-      // ctx.arc(Math.floor(Math.random() * 300), Math.floor(Math.random() * 300), 50, 0, Math.PI * 2);
-      // ctx.fillStyle = randomColor;
-      // ctx.fill();
+      ctx.arc(Math.round(Math.random() * (innerWidth - 100 * 2)), Math.round(Math.random() * (innerWidth - 100 * 2)), this.radius, 0, Math.PI * 2, false);
+      ctx.stroke();
+      ctx.fillStyle = '#' + Math.floor(Math.random() * 16777215).toString(16);;
+      ctx.fill();
+      if (this.radius > 150) {
+        this.speed = -this.speed;
+      }
+      if (this.radius <= 50) {
+        this.speed = -this.speed;
+      }
+      this.radius += this.speed;
     };
   }
 }
@@ -70,17 +67,18 @@ const RenderShape = new ShapeFactory();
 const RectangleShape = new Rectangle();
 const RenderCircle = new Circle();
 const shapeNum = Math.floor(Math.random() * 2);
-const arr = [RectangleShape, RenderCircle];
+const arr = [RectangleShape, RenderCircle]
 
+console.log(arr);
 // RenderShape.drawShape(arr[shapeNum]);
 function animate() {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, innerWidth, innerHeight);
-  for (let i = 0; i < 2; i++) {
+  
     RenderShape.drawShape(arr[shapeNum]);
-  }
+  
 }
 
-setInterval(() => {
-  animate()
-}, 1000);
+
+animate()
+
