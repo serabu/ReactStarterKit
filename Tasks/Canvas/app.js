@@ -34,7 +34,7 @@ class Rectangle extends Shape {
     };
   }
 }
-//TODO
+
 class Circle extends Shape {
   constructor() {
     super([arguments])
@@ -51,7 +51,7 @@ class Circle extends Shape {
         this.speed = -this.speed;
       }
       this.radius += this.speed;
-    };
+    }
   }
 }
 
@@ -63,22 +63,19 @@ class ShapeFactory {
   }
 }
 
-const RenderShape = new ShapeFactory();
-const RectangleShape = new Rectangle();
-const RenderCircle = new Circle();
-const shapeNum = Math.floor(Math.random() * 2);
-const arr = [RectangleShape, RenderCircle]
-
-console.log(arr);
-// RenderShape.drawShape(arr[shapeNum]);
-function animate() {
-  requestAnimationFrame(animate);
-  ctx.clearRect(0, 0, innerWidth, innerHeight);
-  
-    RenderShape.drawShape(arr[shapeNum]);
-  
+const getShepe = () => {
+  const RenderShape = new ShapeFactory();
+  const RectangleShape = new Rectangle();
+  const RenderCircle = new Circle();
+  const shapeNum = Math.floor(Math.random() * 2);
+  const arr = [RectangleShape, RenderCircle]
+  RenderShape.drawShape(arr[shapeNum]);
 }
 
 
-animate()
+setInterval(() => {
+  getShepe()
+}, 3000);
+
+
 
