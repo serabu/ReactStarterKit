@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./async",
-    "lint:fix": "eslint ./async --fix"  
+    "lint:fix": "eslint ./async --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
     "eslint": "^8.30.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
@@ -18,6 +20,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.1"
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4"
   }
 }
