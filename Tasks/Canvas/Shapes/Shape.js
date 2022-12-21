@@ -6,10 +6,3 @@ export class Shape {
     }
 }
 
-export class ShapeFactory {
-    constructor() {
-      this.drawShape = (shape) => {
-        shape.createShape(this.canvas);
-      };
-    }
-  }

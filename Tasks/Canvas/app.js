@@ -1,9 +1,9 @@
-import {getShepe} from "./Shapes/Helper.js";
-const timer = 3000
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+import {getShape} from "./Helpers/Helper.js";
+const timer = 3000;
+canvas.width = window.innerWidth - 200;
+canvas.height = window.innerHeight - 200;
 
 setInterval(() => {
-  getShepe(2)
+  getShape(2);
 }, timer);
 
