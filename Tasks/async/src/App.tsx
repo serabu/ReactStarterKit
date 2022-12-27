@@ -3,7 +3,7 @@ import Home from "./components/home";
 import "./App.scss";
 import {Route, Routes} from "react-router-dom"
 import LoginPage from "./components/auth/login";
-import PrivateRoute from "./components/utils/router/PrivateRoute";
+import PrivateRoute from "./utils/router/PrivateRoute";
 
 function App() {
   return (
