@@ -1,15 +1,13 @@
-import { createReducer } from "@reduxjs/toolkit";
+import { createReducer, PayloadAction } from "@reduxjs/toolkit";
 import { updateCountAction } from "../action/action";
-import { ICoutAction } from "../Interface/Action";
-import { ICounerTyps } from "../Interface/Counts";
+import { CounterActionsList, ICountState } from "../types/Counter.types";
 
-
-const initialState: ICounerTyps = {
+const initialState: ICountState = {
   count: 0,
 };
 
-export default createReducer(initialState, {
-  [updateCountAction]: (state = initialState, {payload}: ICoutAction ) => ({
+export default createReducer(initialState as ICountState, {
+  [updateCountAction as unknown as CounterActionsList]: (state = initialState, { payload } : PayloadAction<number> ): ICountState => ({
     ...state,
     count: payload
   })

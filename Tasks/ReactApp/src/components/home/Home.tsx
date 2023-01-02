@@ -3,10 +3,8 @@ import Button from "react-bootstrap/Button";
 import { useDispatch } from "react-redux";
 import { updateCountAction } from "../../action/action";
 import { UseTypedSelector } from "../../hooks/useTypsSelector";
-import { ICoutAction } from "../../Interface/Action";
 
-
-import style from "./Style.module.scss";
+import style from '../home/Home.scss';
 
 const Home: React.FC = () => {
   const countSelector = UseTypedSelector((state) => state.toolkit.count);
