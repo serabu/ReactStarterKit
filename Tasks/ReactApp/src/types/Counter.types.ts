@@ -1,7 +1,7 @@
 export interface ICountState {
-    count: number
+  count: number;
 }
 
 export enum CounterActionsList {
-    UPDATE_COUNT_ACTION= "UPDATE COUNT ACTION",
+  UPDATE_COUNT_ACTION = "UPDATE COUNT ACTION",
 }
