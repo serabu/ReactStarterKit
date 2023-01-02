@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { updateCountAction } from "../../action/action";
 import { UseTypedSelector } from "../../hooks/useTypsSelector";
 
-import style from '../home/Home.scss';
+import style from './Home.scss';
 
 const Home: React.FC = () => {
   const countSelector = UseTypedSelector((state) => state.toolkit.count);
