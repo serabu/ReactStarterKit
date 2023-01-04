@@ -23,5 +23,5 @@
   },
   "include": [
     "./src/**/*.tsx", "./src/**/*.ts", "./typings/*.ts"
-  ]
+, "src/tests/Counter.test.ts"  ]
 }
