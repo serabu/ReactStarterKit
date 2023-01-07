@@ -1,7 +1,7 @@
 import configureStore from "redux-mock-store";
 
 describe("Home", () => {
-  const middlewares: any = [];
+  const middlewares: never[] = [];
   const mockStore = configureStore(middlewares);
   const UpdateCountAction = () => ({ type: "UPDATE_COUNT_ACTION" });
 
