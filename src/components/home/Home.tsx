@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { updateCountAction } from "../../action/action";
 import { UseTypedSelector } from "../../hooks/useTypsSelector";
 
-import style from './Home.scss';
+// import style from './Home.scss';
 
 const Home: React.FC = () => {
   const countSelector = UseTypedSelector((state) => state.toolkit.count);
@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <h2 className={style.home__header}>home page</h2>
+      <h2 >home page</h2>
       <h1>счет {countSelector} </h1>
       <Button
         variant="primary"
