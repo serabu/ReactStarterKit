@@ -1,17 +1,16 @@
 import React from "react";
-import Home from "./components/home/Home";
 import "./App.scss";
-import NavBar from "./components/Header/header";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Slider from "./components/Slaider/Slaider";
-
+import Slider from "./components/Slider/Slider";
+import * as images from './images/slider';
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Home />
-      <Slider />
+      <Slider>
+          <img className="slideShow__carPicture" src={images.bmw} aria-label="На фото бемельве " />
+          <img className="slideShow__carPicture" src={images.audi} aria-label="На фото бемельве " />
+      </Slider>
     </div>
   );
 }

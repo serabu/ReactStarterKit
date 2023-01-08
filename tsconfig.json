@@ -22,6 +22,9 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "./src/**/*.tsx", "./src/**/*.ts", "./typings/*.ts"
-, "src/tests/Counter.test.ts"  ]
+    "./src/**/*.tsx", 
+    "./src/**/*.ts", 
+    "./typings/*.ts",
+    "declaration.d.ts"
+, "src/tests/Counter.test.ts", "src/components/navigation/Navigation."  ]
 }
