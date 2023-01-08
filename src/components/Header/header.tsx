@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
-function CollapsibleExample() {
+function NavBar() {
   const [isRussian, setIsRussian] = useState(true)
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -44,4 +44,4 @@ function CollapsibleExample() {
   );
 }
 
-export default CollapsibleExample;
+export default NavBar;
