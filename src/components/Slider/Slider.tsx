@@ -1,9 +1,10 @@
 import React, { ReactElement, ReactHTMLElement, ReactNode } from "react";
 import './Slider.scss';
 
+import { SliderProps } from './types';
 import { SliderText } from './constants';
 
-const Slider: React.FC<{ children: ReactNode | ReactNode[] }> = ({ children }) => {
+const Slider: React.FC<SliderProps> = ({ children, count = 1 }) => {
 
   return (
     <div className="container">
