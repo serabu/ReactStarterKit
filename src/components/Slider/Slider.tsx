@@ -12,13 +12,15 @@ import { SliderText } from "./constants";
 
 const Slider: React.FC<SliderProps> = ({ children, counts = 1 }) => {
 
-  const ref = useRef();
+  const ref = useRef(null);
 
   useEffect(() => {
     const slider = ref.current
+    if (!slider) { 
   console.log(slider);
   
-  
+}
+},[]);
   // const debounce = (fun, ms) => {
   //   let timeout;
   //   return function () {
@@ -133,7 +135,7 @@ const Slider: React.FC<SliderProps> = ({ children, counts = 1 }) => {
   // if (responsible) window.addEventListener("resize", responsibleHandler);
   slider.addEventListener("click", dotHandler);
   sliderContainer.style.width = widthOfContainer + "px";
-},[]);
+
   return (
     <div ref={ref}>
       <div className="container">
