@@ -8,73 +8,53 @@ import React, {
 import "./Slider.scss";
 import { SliderProps } from "./types";
 import { SliderText } from "./constants";
+import { Dots } from "./Dots/Dots.";
 
-// const clearSlider = (container, buttonLeft, buttonRight) => {
-//   container.style.left = "0px";
-//   buttonLeft.style.display = "none";
-//   buttonRight.style.display = "block";
-// };
-// TODO: Add types
 const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, responsible=false }) => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
-  function getSliderWidth(width:any, count:number) {
-    const sliderWidth = width * count
-    const dotsCount  = count 
-    return  sliderWidth
+  const sliderWrapperRef = useRef<HTMLDivElement | null>(null);
+  const buttonRight = useRef<HTMLDivElement | null>(null);
+  const buttonLeft = useRef<HTMLDivElement | null>(null);
+  const [sliderContainer, setContainer] = useState<HTMLDivElement | null>(null);
+  const [width, setWidth] = useState();
+  const [showDots, setShowDots] = useState();
+  const [dotsCount, setDotsCount] = useState(0);
+  const [widthSlide, setWidthSlide] = useState(0);
+  const [widthOfContainer, setWidthOfContainer] = useState(0);
+  const [availableSlidesCount, setAvailableSlidesCount] = useState(count);
+  
+  const getWidth = (slider: HTMLDivElement) => {
+    const container = slider.querySelector('.slideShow__container');
+    const wrapper = slider.querySelector('.slideShow__wrapper');
+    setWidthOfContainer((slider.querySelector('.slideShow__slide') as unknown as HTMLElement)?.offsetWidth);
+    const checkCounts = Math.round((slider.offsetWidth - 200) / widthSlide);
+    setWidthOfContainer(widthSlide * checkCounts);
+    setAvailableSlidesCount(count < availableSlidesCount ? count : availableSlidesCount);
+    setDotsCount(container ? Math.ceil(container.children.length / checkCounts) : 0);
   }
-
-  // TODO: All hanlders here
-  // TODO: Implement one method for find of width of slider like getSliderWidth(<props what you need!>)
+  
+  const moveRight = (): void => {
+        // const [width, setWidth] = useState(0)
+        // const onClick = () => setWidth(getSliderWidth(widthSlide?.offsetWidth, count))
+        // container.style.left = setWidth
+  }
+  
   useEffect(() => {
-    if (sliderRef !== null) {
-      const buttonLeft = sliderRef?.current?.querySelector<HTMLElement>(".slideShow__button--back");
-      const buttonRight = sliderRef?.current?.querySelector<HTMLElement>(".slideShow__button--next");
-      const container = sliderRef?.current?.querySelector<HTMLElement>(".slideShow__container");
-      const sliderContainer = sliderRef?.current?.querySelector<HTMLElement>(".slideShow__wrapper");
-      const widthSlide  = sliderRef?.current?.querySelector<HTMLElement>(".slideShow__slide");
-      const widthOfContainer = getSliderWidth(widthSlide?.offsetWidth, count)
-      sliderContainer.style.width = widthOfContainer + 'px'
-      const dotsCount = count
+    if (sliderRef.current) {
+      getWidth(sliderRef.current);
     }
   }, [sliderRef]);
 
-      
-
-      // const [width, setWidth] = useState(0)
-
-      const moveRight = () => {
-        const [width, setWidth] = useState(0)
-        const onClick = () => setWidth(getSliderWidth(widthSlide?.offsetWidth, count))
-
-        
-        container.style.left = setWidth
-
-      }
-      const moveLeft = () => {
-        const leftPosition = container?.offsetLeft;
-        container.style.left = leftPosition + widthOfContainer +'px';
-
-      }
-
-      
-      
-
-
-      // TODO: find other elements
-      
-      // TODO use getSliderWidth here;
-   
-
   return (
     <div ref={sliderRef}>
-      <div className="container">
+      <div className="container" style={{width: width}}>
         <div className="row">
           <div className="slideShow" id="slider-1" role="list">
-            <div className="slideShow__wrapper"  role="listbox">
+            <div className="slideShow__wrapper" ref={sliderWrapperRef}  role="listbox">
               <ul className="slideShow__container" role="listbox">
                 {Array.isArray(children)
-                  ? children.map((slide) => (
-                      <li className="slideShow__slide">{slide}</li>
+                  ? children.map((slide, i) => (
+                      <li key={`item-${i}`} className="slideShow__slide">{slide}</li>
                     ))
                   : children}
               </ul>
@@ -91,12 +71,13 @@ const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, resp
                 className="slideShow__button slideShow__button--next"
                 aria-label={SliderText.NEXT_SLIDE}
                 role="button"
-                onClick={moveRight}
+                onClick={() => moveRight()}
               >
                 {SliderText.NEXT_SLIDE}
               </button>
             </div>
           </div>
+          { showDots && (<Dots dots={dotsCount} />) }
         </div>
       </div>
     </div>
