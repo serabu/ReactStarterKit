@@ -16,7 +16,7 @@ import { SliderText } from "./constants";
 // };
 // TODO: Add types
 const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, responsible=false }) => {
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<HTMLDivElement | null>(null);
   function getSliderWidth(width:any, count:number) {
     const sliderWidth = width * count
     const dotsCount  = count 
@@ -33,16 +33,21 @@ const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, resp
       const sliderContainer = sliderRef?.current?.querySelector<HTMLElement>(".slideShow__wrapper");
       const widthSlide  = sliderRef?.current?.querySelector<HTMLElement>(".slideShow__slide");
       const widthOfContainer = getSliderWidth(widthSlide?.offsetWidth, count)
+      sliderContainer.style.width = widthOfContainer + 'px'
       const dotsCount = count
-      
+    }
+  }, [sliderRef]);
 
       
 
       // const [width, setWidth] = useState(0)
 
       const moveRight = () => {
-        const leftPosition = container?.offsetLeft;
-        container.style.left = leftPosition - widthOfContainer +'px';
+        const [width, setWidth] = useState(0)
+        const onClick = () => setWidth(getSliderWidth(widthSlide?.offsetWidth, count))
+
+        
+        container.style.left = setWidth
 
       }
       const moveLeft = () => {
@@ -51,16 +56,14 @@ const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, resp
 
       }
 
-      buttonRight?.addEventListener('click', moveRight);
-      buttonLeft?.addEventListener('click', moveLeft);
+      
       
 
 
       // TODO: find other elements
       
       // TODO use getSliderWidth here;
-    }
-  }, [sliderRef]);
+   
 
   return (
     <div ref={sliderRef}>
@@ -88,6 +91,7 @@ const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, resp
                 className="slideShow__button slideShow__button--next"
                 aria-label={SliderText.NEXT_SLIDE}
                 role="button"
+                onClick={moveRight}
               >
                 {SliderText.NEXT_SLIDE}
               </button>
