@@ -10,7 +10,7 @@ import { SliderProps } from "./types";
 import { SliderText } from "./constants";
 import { Dots } from "./Dots/Dots.";
 
-const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, responsible=false }) => {
+const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = true, responsible=false }) => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
   const sliderWrapperRef = useRef<HTMLDivElement | null>(null);
   const buttonRight = useRef<HTMLDivElement | null>(null);
@@ -19,8 +19,8 @@ const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, resp
   const [displyBtmRight, setDisplyBtmRight ] = useState(true)
   const [sliderContainer, setContainer] = useState(0);
   const [width, setWidth] = useState();
-  const [showDots, setShowDots] = useState();
-  const [dotsCount, setDotsCount] = useState(0);
+  const [showDots, setShowDots] = useState(dots);
+  const [dotsCount, setDotsCount] = useState(3);
   const [widthSlide, setWidthSlide] = useState(200);
   const [widthOfContainer, setWidthOfContainer] = useState(0);
   const [availableSlidesCount, setAvailableSlidesCount] = useState(count);
@@ -32,10 +32,7 @@ const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, resp
     const checkCounts = Math.round((slider.offsetWidth - 200) / widthSlide); // smt wrong here
     // setWidthOfContainer(widthSlide * availableSlidesCount);
     setAvailableSlidesCount(count < availableSlidesCount ? count : availableSlidesCount);
-    setDotsCount(container ? Math.ceil(container.children.length / checkCounts) : 0);
-    
-    
-    
+    // setDotsCount(container ? Math.ceil(container.children.length / checkCounts) : 0); 
   }
   
   const moveRight = (): void => {
@@ -46,11 +43,9 @@ const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, resp
   }
 
   const moveLeft = (): void => {
-
     setContainer( sliderContainer + widthOfContainer  * availableSlidesCount )
     if (widthOfContainer + sliderContainer === 0)setDisplyBtmLeft(false);
     if (sliderContainer < 0) setDisplyBtmLeft(true);
-
   }
 
   useEffect(() => {
@@ -61,8 +56,7 @@ const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, resp
 
   return (
     <div ref={sliderRef}>
-      <div className="container" style={{width: width}}>
-        <div className="row">
+      <div style={{width: width}}>
           <div className="slideShow" id="slider-1" role="list">
             <div className="slideShow__wrapper" ref={sliderWrapperRef}  role="listbox">
               <ul className="slideShow__container" role="listbox" style={{left: sliderContainer}}>
@@ -93,9 +87,8 @@ const Slider: React.FC<SliderProps> = ({ children, count = 3, dots = false, resp
               </button>
             </div>
           </div>
-          { showDots && (<Dots dots={dotsCount} />) }
+          { showDots && (<Dots dotsCount={dotsCount} />) }
         </div>
-      </div>
     </div>
   );
 };

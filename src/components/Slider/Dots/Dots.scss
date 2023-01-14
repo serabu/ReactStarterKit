@@ -1,0 +1,17 @@
+.dots {
+    &__list{
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item {
+        padding: 5px;
+        background: grey;
+        border-radius: 100%;
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+    }
+}
