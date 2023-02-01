@@ -1,0 +1,68 @@
+.slider {
+  position: relative;
+  padding: 24px 0;
+
+  &__wrapper {
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__list {
+    display: inline-flex;
+    left: 0;
+    list-style: none;
+    position: relative;
+    transition: all 250ms;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  &__slide {
+    display: inline-block;
+    padding: 0 10px;
+
+    width: 300px;
+
+    img {
+      height: 200px;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__buttons {
+    margin: 0 20px;
+    position: relative;
+  }
+
+  &__button {
+    position: absolute;
+    border: 1px solid rgba(black, .2);
+    border-radius: 8px;
+    padding: 16px;
+    background: transparent;
+    color: black;
+    font-size: 1em;
+    cursor: pointer;
+    
+    &--next {
+      right: 0;
+    }
+
+    &--back {
+      left: 0;
+    }
+  } 
+}
