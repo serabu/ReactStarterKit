@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  // TODO: Please, use special templates of SCSS for a group of properties.
   background: url(https://dompokrov.ru/remont/img/qualitative.jpg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -7,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px;
+  // TODO: Please use MAP of SCSS for colors and borders
   background-color: #e35757;
   overflow: hidden;
 
@@ -35,9 +37,12 @@
     padding: 60px;
     text-align: center;
     color: rgba(255, 255, 255, 0.912);
+    // TODO Why do you use double underscore after name of element?
     &__h1 {
       font-size: 72px;
     }
+
+    // TODO Why do you use double underscore after name of element?
     &__h2 {
       font-size: 20px;
     }
@@ -47,6 +52,7 @@
     gap: 26px;
     justify-content: center;
 
+    // TODO Why do you need the context selector?
     & .header__button {
       background-color: white;
       color: rgba(62, 58, 58, 0.912);
@@ -56,6 +62,7 @@
       // Стили для каждой кнопки
     }
 
+    // TODO Please use SCSS tips
     & .header__button:hover {
       background-color: rgba(37, 37, 228, 0.662);
     }
@@ -67,6 +74,7 @@
     margin-top: 20px;
     margin-bottom: 60px;
     padding: 10px;
+    // TODO: Please use MAP of SCSS for colors and borders
     background-color: #f8f9fa;
     border-top: 1px solid #dee2e6;
     border-bottom: 1px solid #dee2e6;
@@ -77,6 +85,7 @@
       border: none;
       border-radius: 8px 0 0 8px;
       font-size: 16px;
+      // TODO: Please use MAP of SCSS for colors and borders
       background-color: #fff;
     }
 
@@ -84,7 +93,9 @@
       padding: 10px 20px;
       border: none;
       border-radius: 0 4px 4px 0;
+      // TODO: Please use MAP of SCSS for colors and borders
       background-color: #007bff;
+      // TODO: Please use MAP of SCSS for colors and borders
       color: #fff;
       font-size: 16px;
       cursor: pointer;
@@ -92,10 +103,12 @@
     }
 
     .search-button:hover {
+      // TODO: Please use MAP of SCSS for colors and borders
       background-color: #0056b3;
     }
 
     .search-input::placeholder {
+      // TODO: Please use MAP of SCSS for colors and borders
       color: #adb5bd;
     }
   }

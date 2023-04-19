@@ -3,6 +3,7 @@
     no-repeat;
   background-size: cover;
   background-position: center;
+  // TODO: Please use english for comments
   padding: 20px 0; /* Добавляем отступ сверху и снизу */
   color: white;
   margin: 0 auto;
@@ -34,6 +35,7 @@
 
   &__container {
     margin: 20px;
+    // TODO: Please use MAP of SCSS for colors and borders
     border-top: 1px solid #ccc; 
     border-bottom: 1px solid #ccc; 
     display: flex;
