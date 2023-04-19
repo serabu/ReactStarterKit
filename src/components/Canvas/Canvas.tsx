@@ -9,9 +9,13 @@ const Canvas = (): React.ReactElement => {
       this.width = width;
       this.height = height;
     }
-  
-    createShape = (canvas: HTMLCanvasElement): void => {};
-    clear = (canvas: HTMLCanvasElement): void => {};
+  // @typescript-eslint/no-unused-vars
+    createShape = (canvas: HTMLCanvasElement): void => {
+      console.log('canvas', canvas);
+    };
+    clear = (canvas: HTMLCanvasElement): void => {
+      console.log('clear', canvas);
+    };
   }
   
   class Rectangle extends Shape {

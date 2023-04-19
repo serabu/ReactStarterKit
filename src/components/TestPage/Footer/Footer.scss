@@ -1,0 +1,75 @@
+.footer {
+  background: url(https://www.free-wallpapers.su/data/media/18/big/tex0356.jpg)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0; /* Добавляем отступ сверху и снизу */
+  color: white;
+  margin: 0 auto;
+
+  &__wrapper{
+    position: relative;
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 20px;
+  }
+
+  &__sub {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      
+      &__h1 {
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+
+      &__h2 {
+        font-size: 16px;
+        
+      }
+    }
+  }
+
+  &__container {
+    margin: 20px;
+    border-top: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc; 
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__column {
+    flex: 1;
+    padding: 1rem;
+
+    &__title {
+      margin-bottom: 1rem;
+    }
+
+    &__links {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__links li {
+      margin-bottom: 0.5rem;
+    }
+
+    &__links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    &__links a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__rights {
+    padding-top: 20px;
+    text-align: center;
+  }
+}

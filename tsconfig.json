@@ -26,5 +26,5 @@
     "./src/**/*.ts", 
     "./typings/*.ts",
     "declaration.d.ts"
-, "src/tests/Counter.test.ts", "src/components/navigation/Navigation."  ]
+, "src/tests/Counter.test.ts", "src/components/navigation/Navigation.", "src/components/Users/UserProfile/userWrapper/userWrapper.tsч"  ]
 }

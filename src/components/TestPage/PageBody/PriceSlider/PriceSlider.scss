@@ -1,0 +1,25 @@
+.priceSlider {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px;
+  /* Стили для контейнера слайдера */
+  &__title {
+    margin: 20px;
+    padding: 60px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+    &__h1 {
+      font-size: 72px;
+    }
+    &__h2 {
+      font-size: 20px;
+    }
+  }
+
+  .slider {
+  
+  }
+}

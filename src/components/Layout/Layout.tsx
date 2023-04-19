@@ -24,16 +24,25 @@ function Layout() {
                 <LinkContainer to="Canvas">
                   <NavDropdown.Item>Canvas</NavDropdown.Item>
                 </LinkContainer>
-                <LinkContainer to="/">
-                  <NavDropdown.Item href="/">to be continued</NavDropdown.Item>
+                <LinkContainer to="TestPage">
+                  <NavDropdown.Item>TestPage</NavDropdown.Item>
                 </LinkContainer>
               </NavDropdown>
+            </Nav>
+            <Nav>
+            <LinkContainer to="Form">
+                <Nav.Link href="Form">Registration</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="UserList">
+                <Nav.Link href="UserList">List of users</Nav.Link>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
       <Outlet />
     </>
+    
   );
 }
 

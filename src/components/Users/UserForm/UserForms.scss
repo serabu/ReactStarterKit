@@ -1,0 +1,22 @@
+.userForm {
+  padding: 24px 0;
+  width: 100%;
+
+  &__alertErrors {
+    color: red;
+  }
+
+  &__container {
+    text-align: center;
+  }
+
+  &__input {
+    width: 100%;
+    display: grid;
+    margin-bottom: 10px;
+  }
+
+  &__btmSubmit {
+    margin: 10px;
+  }
+}
