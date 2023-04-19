@@ -12,12 +12,14 @@ export const Footer = () => {
               tempor incididunt
             </h2>
           </div>
-          <input
-            type="text"
-            className="footer__sub__input"
-            placeholder="Enter Your Email Addres"
-          ></input>
-          <button className="footer__sub__button">Subscribe Now</button>
+          <div className="footer__sub__wrapper">
+            <input
+              type="text"
+              className="footer__sub__input"
+              placeholder="Enter Your Email Addres"
+            ></input>
+            <button className="footer__sub__button">Subscribe Now</button>
+          </div>
         </div>
         <div className="footer__container">
           <div className="footer__column">
@@ -82,8 +84,7 @@ export const Footer = () => {
         </div>
         <div className="footer__rights">
           <h2 className="footer__rights__title">
-            {" "}
-            ⓒ 2023 Luxurious House. All Rights Reserved.{" "}
+            ⓒ 2023 Luxurious House. All Rights Reserved.
           </h2>
         </div>
       </div>
