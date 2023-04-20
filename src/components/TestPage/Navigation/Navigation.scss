@@ -1,3 +1,5 @@
+@import '../colors';
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -25,11 +27,12 @@
 }
 
 .add-listing-btn {
-  background-color: #007bff;
+  background-color: $btn-blue;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
   padding: 10px 15px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }

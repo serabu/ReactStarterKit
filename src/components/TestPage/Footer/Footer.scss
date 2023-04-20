@@ -1,9 +1,9 @@
 .footer {
-  background: url(https://www.free-wallpapers.su/data/media/18/big/tex0356.jpg)
+  background: url(https://funart.pro/uploads/posts/2022-08/1659680163_26-funart-pro-p-temnii-fon-dlya-saita-krasivo-27.jpg)
     no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 20px 0; /* Добавляем отступ сверху и снизу */
+  padding: 20px 0; 
   color: white;
   margin: 0 auto;
 
@@ -52,7 +52,7 @@
       padding: 10px 20px;
       border: none;
       border-radius: 0 4px 4px 0;
-      background-color: #007bff;
+      background-color: #f83838;
       color: #fff;
       font-size: 16px;
       cursor: pointer;
@@ -61,7 +61,7 @@
   }
 
   &__container {
-    margin: 20px;
+    left: 0;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     display: flex;
@@ -70,7 +70,6 @@
 
   &__column {
     flex: 1;
-    padding: 1rem;
     margin-top: 20px;
 
     &__title {
