@@ -1,4 +1,9 @@
 import "./Footer.scss";
+import * as img from "../IMG/index";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 export const Footer = () => {
   return (
@@ -6,11 +11,11 @@ export const Footer = () => {
       <div className="footer__wrapper">
         <div className="footer__sub">
           <div className="footer__sub__title">
-            <h1 className="footer__sub__title__h1">Join Our Newsletter</h1>
-            <h2 className="footer__sub__title__h2">
+            <h2 className="footer__sub__title__h1">Join Our Newsletter</h2>
+            <h3 className="footer__sub__title__h2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               tempor incididunt
-            </h2>
+            </h3>
           </div>
           <div className="footer__sub__wrapper">
             <input
@@ -22,6 +27,21 @@ export const Footer = () => {
           </div>
         </div>
         <div className="footer__container">
+          <div className="footer__column">
+            <img className="footer__column__title" src={img.logo}></img>
+            <ul className="footer__column__links">
+              <li>
+                Lorem ipsum amet, consectetur adipisicing elit, sed do eiusmod
+                tempor magna aliqua.
+              </li>
+              <li className="footer__column__icons">
+              <TelegramIcon />
+              <WhatsAppIcon />
+              <TwitterIcon />
+              <InstagramIcon />
+              </li>
+            </ul>
+          </div>
           <div className="footer__column">
             <h4 className="footer__column__title">Services</h4>
             <ul className="footer__column__links">
@@ -66,15 +86,16 @@ export const Footer = () => {
             <h4 className="footer__column__title">Contact</h4>
             <ul className="footer__column__links">
               <li>
-                <span>
-                  Location: 3064/3065 Silver Busunnes Point Uttran Surat
-                </span>
+                Location:
+                <span>3064/3065 Silver Busunnes Point Uttran Surat</span>
               </li>
               <li>
-                <span>info@lathityasolutions.com</span>
+                Email:
+                <span> info@lathityasolutions.com</span>
               </li>
               <li>
-                <span>Phone: (+91) 78785 35701</span>
+                Phone:
+                <span> (+91) 78785 35701</span>
               </li>
               <li>
                 <a href="/">View location on GoogleMaps</a>

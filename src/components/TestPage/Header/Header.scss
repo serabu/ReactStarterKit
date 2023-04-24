@@ -11,6 +11,7 @@
   padding: 16px;
   background-color: #e35757;
   overflow: hidden;
+  height: 600px;
 
   &::before {
     content: "";
@@ -33,7 +34,7 @@
   }
 
   &__title {
-    margin: 20px;
+    margin: 16px;
     padding: 60px;
     text-align: center;
     color: rgba(255, 255, 255, 0.912);
@@ -41,6 +42,7 @@
       font-size: 72px;
     }
     &__h2 {
+      margin-top: 10px;
       font-size: 20px;
     }
   }

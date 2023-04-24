@@ -1,5 +1,5 @@
 import "./PopupRent.scss"; 
-import SearchIcon from '@mui/icons-material/Search';
+
 
 export const PopupRent = () => {
   return (

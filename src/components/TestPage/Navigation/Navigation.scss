@@ -1,4 +1,4 @@
-@import '../colors';
+@import "../colors";
 
 .navigation {
   display: flex;
@@ -15,18 +15,94 @@
 
 .menu {
   display: flex;
-  gap: 15px;
+  gap: 24px;
   list-style-type: none;
+  cursor: pointer;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 988px) {
+    display: none;
+  }
+
+  &__item:hover {
+    color: $btn-blue;
+  }
+
+  &__item {
+    width: 80px;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+
+    &:hover {
+      color: $btn-blue;
+
+      &__dropdown {
+        display: block;
+      }
+    }
+
+    &__dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+
+      a {
+        padding: 8px 0 8px 0;
+        display: block;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+
+        &:hover {
+          color: $btn-blue;
+        }
+      }
+    }
+  }
 }
 
-.menu-item {
+.menu__item:hover {
+  color: $btn-blue;
+}
+
+.menu__item {
+  width: 80px;
+  position: relative;
   font-size: 16px;
   font-weight: bold;
+
+  &:hover {
+    color: $btn-blue;
+
+    .menu__dropdown {
+      display: block;
+    }
+  }
 }
 
-.add-listing-btn {
+.menu__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  a {
+    padding: 8px 0 8px 0;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+    &:hover {
+      color: $btn-blue;
+    }
+  }
+}
+
+.add__listing-btn {
   background-color: $btn-blue;
   color: #fff;
   font-size: 16px;
@@ -35,4 +111,9 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  @media (max-width: 988px) {
+    margin-left: auto;
+    margin-right: 10px;
+  }
 }

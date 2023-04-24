@@ -1,17 +1,53 @@
 import "./Navigation.scss";
+import * as img from '../IMG/index'
 
 export const Navigation = () => {
   return (
     <nav className="navigation">
-    <div className="logo">Logo</div>
-    <ul className="menu">
-      <li className="menu-item">Home</li>
-      <li className="menu-item">Listings</li>
-      <li className="menu-item">Features</li>
-      <li className="menu-item">Pages</li>
-      <li className="menu-item">Sign Up</li>
-    </ul>
-    <button className="add-listing-btn">Add Listing</button>
-  </nav>
+      <div className="logo"><img src={img.logo} alt="" /></div>
+      <ul className="menu">
+        <li className="menu__item">
+          Home
+          <div className="menu__dropdown">
+            <a href="#" className="dropdown__link">Link 1</a>
+            <a href="#" className="dropdown__link">Link 2</a>
+            <a href="#" className="dropdown__link">Link 3</a>
+          </div>
+        </li>
+        <li className="menu__item">
+          Listings
+          <div className="menu__dropdown">
+            <a href="#" className="dropdown__link">Link 1</a>
+            <a href="#" className="dropdown__link">Link 2</a>
+            <a href="#" className="dropdown__link">Link 3</a>
+          </div>
+        </li>
+        <li className="menu__item">
+          Features
+          <div className="menu__dropdown">
+            <a href="#" className="dropdown__link">Link 1</a>
+            <a href="#" className="dropdown__link">Link 2</a>
+            <a href="#" className="dropdown__link">Link 3</a>
+          </div>
+        </li>
+        <li className="menu__item">
+          Pages
+          <div className="menu__dropdown">
+            <a href="#" className="dropdown__link">Link 1</a>
+            <a href="#" className="dropdown__link">Link 2</a>
+            <a href="#" className="dropdown__link">Link 3</a>
+          </div>
+        </li>
+        <li className="menu__item">
+          Sign Up
+          <div className="menu__dropdown">
+            <a href="#" className="dropdown__link">Link 1</a>
+            <a href="#" className="dropdown__link">Link 2</a>
+            <a href="#" className="dropdown__link">Link 3</a>
+          </div>
+        </li>
+      </ul>
+      <button className="add__listing-btn">Add Listing</button>
+    </nav>
   );
 };

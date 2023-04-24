@@ -8,50 +8,49 @@
   font-size: 16px;
 }
 
-.popupStatus__container::before{
+.popupStatus__container::before {
   content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 35%; 
-    width: 0;
-    height: 0;
-    border-left: 16px solid transparent;
-    border-bottom: 16px solid white;
-    border-right: 16px solid transparent;
+  position: absolute;
+  bottom: 100%;
+  left: 35%;
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-bottom: 16px solid white;
+  border-right: 16px solid transparent;
 }
-
 
 .popupStatus__content {
   display: flex;
-  justify-content: space-between;
+  align-items: center; 
   padding: 10px;
 }
 
-.input__search {
-
+.input__search,
+.select__property-types,
+.select__location
+ {
+  flex: 1; 
   border: none;
-  border-right: 1px solid #ccc;
+  border-right: $border-size;
 }
 
-.select__property-types {
-
-  border: none;
-  border-right: 1px solid #ccc;
-}
-
+.input__search,
+.select__property-types,
 .select__location {
-
-  border: none;
-  border-right: 1px solid #ccc;
+  padding: 10px; 
 }
 
 .btn__search {
   background-color: $btn-blue;
-  color: #fff;
   font-size: 16px;
   font-weight: bold;
-  padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.popupStatus__icon {
+  margin: 5px; 
+  
 }
