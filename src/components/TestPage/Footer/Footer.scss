@@ -67,8 +67,13 @@
     justify-content: space-around;
   }
 
+  &__icons__wrapper {
+    display: flex;
+    margin-top: 20px;
+  }
+
+
   &__column {
-    margin-right: 40px;
     flex: 1;
     margin-top: 20px;
 
@@ -97,16 +102,14 @@
       }
     }
 
-    &__logo {
-      margin: 20px;
-      
-
+    &__quote {
+      margin-right: 12px;
+      color: $fonts-gray;
+      font-size: 16px;
     }
 
-    &__icons {
+    &__logo {
       margin: 20px;
-      text-align: center;
-
     }
 
     &__links {
@@ -119,14 +122,17 @@
     &__links li {
       margin-bottom: 0.5rem;
       color: white;
+      font-size: 18px;
     }
 
     &__links span {
       margin-bottom: 0.5rem;
       color: $fonts-gray;
+      font-size: 16px;
     }
 
     &__links a {
+      font-size: 16px;
       color: $fonts-gray;
       text-decoration: none;
       display: inline-block;

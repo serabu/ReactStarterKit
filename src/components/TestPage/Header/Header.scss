@@ -8,10 +8,9 @@
   grid-template-columns: 1fr;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
   background-color: #e35757;
   overflow: hidden;
-  height: 600px;
+  height: 560px;
 
   &::before {
     content: "";
@@ -29,7 +28,6 @@
     position: relative;
     margin: 0 auto;
     max-width: 1300px;
-    padding: 20px;
     z-index: 2;
   }
 

@@ -28,17 +28,25 @@ export const Footer = () => {
         </div>
         <div className="footer__container">
           <div className="footer__column">
-            <img className="footer__column__title" src={img.logo}></img>
-            <ul className="footer__column__links">
+            <img className="footer__column__logo" src={img.logo}></img>
+            <ul className="footer__column__quote">
               <li>
                 Lorem ipsum amet, consectetur adipisicing elit, sed do eiusmod
                 tempor magna aliqua.
               </li>
+            </ul>
+            <ul className="footer__icons__wrapper">
               <li className="footer__column__icons">
-              <TelegramIcon />
-              <WhatsAppIcon />
-              <TwitterIcon />
-              <InstagramIcon />
+                <TelegramIcon fontSize="large" />
+              </li>
+              <li className="footer__column__icons">
+                <WhatsAppIcon fontSize="large" />
+              </li>
+              <li className="footer__column__icons">
+                <TwitterIcon fontSize="large" />
+              </li>
+              <li className="footer__column__icons">
+                <InstagramIcon fontSize="large" />
               </li>
             </ul>
           </div>
