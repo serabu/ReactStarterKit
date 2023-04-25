@@ -1,5 +1,5 @@
 import "./Footer.scss";
-import * as img from "../IMG/index";
+import * as img from "../../images/TestPage";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import TwitterIcon from "@mui/icons-material/Twitter";

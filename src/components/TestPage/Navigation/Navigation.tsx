@@ -1,5 +1,5 @@
 import "./Navigation.scss";
-import * as img from '../IMG/index'
+import * as img from "../../images/TestPage";
 
 export const Navigation = () => {
   return (
