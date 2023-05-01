@@ -7,7 +7,7 @@ import "./Slider.scss";
 import { SliderProps } from "./types";
 import { SliderText, SliderMoveAction } from "./constants";
 import { Dots } from "./Dots/Dots.";
-import { debounce } from "../../helpers/helpers";
+import { debounce } from "../../../helpers/helpers";
 
 export const Slider: React.FC<SliderProps> = ({ children, count = 4, dots = true }) => {
   const sliderRef = useRef<HTMLDivElement | null>(null);

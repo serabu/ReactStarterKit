@@ -1,6 +1,6 @@
 import React, {
 } from "react";
-import * as images from "../../images/slider";
+import * as images from "../../../images/slider";
 import { Slider } from "./Slider";
 
 export const SliderWrapper: React.FC = () => (

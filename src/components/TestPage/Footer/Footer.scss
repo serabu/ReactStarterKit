@@ -1,4 +1,4 @@
-@import "../colors";
+@import "/src/components/Styles/colors";
 
 .footer {
   background: rgb(32, 31, 31);
@@ -17,15 +17,15 @@
     padding-bottom: 60px;
     justify-content: space-between;
     &__title {
-      &__h1 {
-        font-size: 26px;
+      &__h2 {
+        font-size: 18px;
         margin-bottom: 16px;
       }
 
-      &__h2 {
+      &__h3 {
         max-width: 500px;
-        color: $fonts-gray;
-        font-size: 16px;
+        color: map-get($colors, fonts-gray);
+        font-size: 12px;
       }
     }
 
@@ -44,7 +44,7 @@
       padding: 10px;
       border: none;
       border-radius: 5px;
-      font-size: 16px;
+      font-size: 12px;
       background-color: #fff;
     }
 
@@ -54,7 +54,8 @@
       border-radius: 5px;
       background-color: #f83838;
       color: #fff;
-      font-size: 16px;
+      font-size: 12px;
+      margin-left: 8px;
       cursor: pointer;
     }
   }
@@ -69,9 +70,8 @@
 
   &__icons__wrapper {
     display: flex;
-    margin-top: 20px;
+    margin: 20px 0 20px 0;
   }
-
 
   &__column {
     flex: 1;
@@ -80,6 +80,7 @@
     &__title {
       margin-bottom: 1rem;
       position: relative;
+      font-size: 18px;
 
       &:before {
         content: "";
@@ -88,7 +89,7 @@
         left: 0;
         width: 20%;
         height: 2px;
-        background-color: $btn-blue;
+        background-color: map-get($colors, btn-blue);
       }
 
       &:after {
@@ -98,14 +99,19 @@
         left: 20%;
         width: 40%;
         height: 1px;
-        background-color: $fonts-gray;
+        background-color: map-get($colors, fonts-gray);
       }
+    }
+
+    &__icons {
+      margin-right: 8px;
+      text-decoration: none;
     }
 
     &__quote {
       margin-right: 12px;
-      color: $fonts-gray;
-      font-size: 16px;
+      color: map-get($colors, fonts-gray);
+      font-size: 12px;
     }
 
     &__logo {
@@ -116,30 +122,30 @@
       list-style-type: none;
       padding: 0;
       margin: 0;
-      color: $fonts-gray;
+      color: map-get($colors, fonts-gray);
     }
 
     &__links li {
       margin-bottom: 0.5rem;
       color: white;
-      font-size: 18px;
+      font-size: 12px;
     }
 
     &__links span {
       margin-bottom: 0.5rem;
-      color: $fonts-gray;
-      font-size: 16px;
+      color: map-get($colors, fonts-gray);
+      font-size: 12px;
     }
 
     &__links a {
-      font-size: 16px;
-      color: $fonts-gray;
+      font-size: 12px;
+      color: map-get($colors, fonts-gray);
       text-decoration: none;
       display: inline-block;
     }
 
     &__links a:hover {
-      color: $btn-blue;
+      color: map-get($colors, btn-blue);
       text-decoration: underline;
     }
   }
@@ -147,7 +153,7 @@
   &__rights {
     padding-top: 20px;
     text-align: center;
-    color: $fonts-gray;
-    font-size: 16px;
+    color: map-get($colors, fonts-gray);
+    font-size: 12px;
   }
 }

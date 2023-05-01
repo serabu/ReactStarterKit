@@ -1,4 +1,4 @@
-@import "/src/components/TestPage/colors";
+@import "/src/components/Styles/colors";
 
 .popupStatus__container {
   position: relative;
@@ -42,7 +42,7 @@
 }
 
 .btn__search {
-  background-color: $btn-blue;
+  background-color: map-get($colors, btn-blue);
   font-size: 16px;
   font-weight: bold;
   border: none;

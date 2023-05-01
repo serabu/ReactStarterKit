@@ -1,4 +1,4 @@
-import { Slider } from "../../../Slider/Slider";
+import { Slider } from "../../../Shared/Slider/Slider";
 import "./PriceSlider.scss";
 
 export const PriceSlider = () => {
@@ -12,16 +12,16 @@ export const PriceSlider = () => {
       </h2>
       </div>
       <Slider >
-      <img className="slider__carPicture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве "  alt={'car'}/>
-    <img className="slider__carPicture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'}/>
-    <img className="slider__carPicture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
-    <img className="slider__carPicture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
-    <img className="slider__carPicture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
-    <img className="slider__carPicture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
-    <img className="slider__carPicture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
-    <img className="slider__carPicture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
-    <img className="slider__carPicture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
-    <img className="slider__carPicture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
+      <img className="priceSlider__picture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве "  alt={'car'}/>
+    <img className="priceSlider__picture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'}/>
+    <img className="priceSlider__picture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
+    <img className="priceSlider__picture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
+    <img className="priceSlider__picture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
+    <img className="priceSlider__picture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
+    <img className="priceSlider__picture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
+    <img className="priceSlider__picture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
+    <img className="priceSlider__picture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
+    <img className="priceSlider__picture" src={"https://mastera-remonta.com/wp-content/uploads/2019/09/1-2.png"} aria-label="На фото бемельве " alt={'car'} />
       </Slider>  
     </div>
   );

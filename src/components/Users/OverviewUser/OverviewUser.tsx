@@ -24,19 +24,17 @@ export const OverviewUser = () => {
   }, [currentUser]);
 
   const getBannerComponent = {
-    // TODO: change name of firlds and use enum like [ProfileUser.Front_End]
     FrontEnd: <FrontEndUserBanner />,
     BackEnd: <BackEndUserBanner />,
     Designer: <DesignerUserBanner />,
   };
 
-  // TODO: Fix issue with undefined of position
-  const BannerComponent: React.FC = () => 
-    getBannerComponent[currentUser.position as ProfileUser]?? "We couldn't find your position";
+  const BannerComponent: React.FC = () =>
+    getBannerComponent[currentUser.position as ProfileUser] ??
+    "We couldn't find your position";
 
   return (
     <>
-    // TODO: you don't need this check
       {currentUser.position && <BannerComponent />}
       <UserForm {...currentUser} handler={updateUserById} />
     </>

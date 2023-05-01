@@ -3,7 +3,7 @@ import { PriceSlider } from "./PriceSlider/PriceSlider";
 
 export const PageBody = () => {
   return (
-    <div className="pageBody">
+    <div >
       <PriceSlider />
     </div>
   );

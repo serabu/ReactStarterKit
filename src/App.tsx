@@ -4,7 +4,7 @@ import "./App.scss";
 import Canvas from "./components/Canvas/Canvas";
 import { NotFoundPage } from "./components/ErorPage/NotFoundPage";
 import Layout from "./components/Layout/Layout";
-import { SliderWrapper } from "./components/Slider/SliderWrapper";
+import { SliderWrapper } from "./components/Shared/Slider/SliderWrapper";
 import { TestPage } from "./components/TestPage/TestPage";
 import {  OverviewUserComponent } from "./components/Users/OverviewUser/OverviewUser";
 

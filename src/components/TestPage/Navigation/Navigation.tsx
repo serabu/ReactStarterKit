@@ -1,49 +1,121 @@
 import "./Navigation.scss";
-import * as img from "../../images/TestPage";
+import { Logo } from "../../Styles/Logo/logo";
 
 export const Navigation = () => {
   return (
     <nav className="navigation">
-      <div className="logo"><img src={img.logo} alt="" /></div>
+      <div className="logo">
+        <Logo />
+      </div>
       <ul className="menu">
         <li className="menu__item">
           Home
           <div className="menu__dropdown">
-            <a href="#" className="dropdown__link">Link 1</a>
-            <a href="#" className="dropdown__link">Link 2</a>
-            <a href="#" className="dropdown__link">Link 3</a>
+            <ul>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 1
+                </a>
+              </li>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 2
+                </a>
+              </li>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 3
+                </a>
+              </li>
+            </ul>
           </div>
         </li>
         <li className="menu__item">
           Listings
           <div className="menu__dropdown">
-            <a href="#" className="dropdown__link">Link 1</a>
-            <a href="#" className="dropdown__link">Link 2</a>
-            <a href="#" className="dropdown__link">Link 3</a>
+            <ul>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 1
+                </a>
+              </li>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 2
+                </a>
+              </li>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 3
+                </a>
+              </li>
+            </ul>
           </div>
         </li>
         <li className="menu__item">
           Features
           <div className="menu__dropdown">
-            <a href="#" className="dropdown__link">Link 1</a>
-            <a href="#" className="dropdown__link">Link 2</a>
-            <a href="#" className="dropdown__link">Link 3</a>
+            <ul>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 1
+                </a>
+              </li>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 2
+                </a>
+              </li>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 3
+                </a>
+              </li>
+            </ul>
           </div>
         </li>
         <li className="menu__item">
           Pages
           <div className="menu__dropdown">
-            <a href="#" className="dropdown__link">Link 1</a>
-            <a href="#" className="dropdown__link">Link 2</a>
-            <a href="#" className="dropdown__link">Link 3</a>
+            <ul>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 1
+                </a>
+              </li>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 2
+                </a>
+              </li>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 3
+                </a>
+              </li>
+            </ul>
           </div>
         </li>
         <li className="menu__item">
           Sign Up
           <div className="menu__dropdown">
-            <a href="#" className="dropdown__link">Link 1</a>
-            <a href="#" className="dropdown__link">Link 2</a>
-            <a href="#" className="dropdown__link">Link 3</a>
+            <ul>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 1
+                </a>
+              </li>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 2
+                </a>
+              </li>
+              <li>
+                <a href="#" className="dropdown__link">
+                  Link 3
+                </a>
+              </li>
+            </ul>
           </div>
         </li>
       </ul>

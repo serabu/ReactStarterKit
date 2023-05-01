@@ -1,4 +1,10 @@
-@import "../colors";
+@import "/src/components/Styles/colors";
+
+@each $color, $value in $colors {
+  .text-#{$color} {
+    background-color: map-get($colors, btn-blue);
+  };
+}
 
 .navigation {
   display: flex;
@@ -25,7 +31,7 @@
   }
 
   &__item:hover {
-    color: $btn-blue;
+    color: map-get($colors, btn-blue);
   }
 
   &__item {
@@ -35,7 +41,7 @@
     font-weight: bold;
 
     &:hover {
-      color: $btn-blue;
+      color: map-get($colors, btn-blue);
 
       &__dropdown {
         display: block;
@@ -48,6 +54,7 @@
       top: 100%;
       left: 0;
       width: 100%;
+      
 
       a {
         padding: 8px 0 8px 0;
@@ -56,7 +63,7 @@
         text-decoration: none;
 
         &:hover {
-          color: $btn-blue;
+          color: map-get($colors, btn-blue);
         }
       }
     }
@@ -64,7 +71,7 @@
 }
 
 .menu__item:hover {
-  color: $btn-blue;
+  color: map-get($colors, btn-blue);
 }
 
 .menu__item {
@@ -74,7 +81,7 @@
   font-weight: bold;
 
   &:hover {
-    color: $btn-blue;
+    color: map-get($colors, btn-blue);
 
     .menu__dropdown {
       display: block;
@@ -88,6 +95,7 @@
   top: 100%;
   left: 0;
   width: 100%;
+  margin-top: 8px;
 
   a {
     padding: 8px 0 8px 0;
@@ -96,13 +104,13 @@
     text-decoration: none;
 
     &:hover {
-      color: $btn-blue;
+      color: map-get($colors, btn-blue);
     }
   }
 }
 
 .add__listing-btn {
-  background-color: $btn-blue;
+  background-color: map-get($colors, btn-blue);
   color: #fff;
   font-size: 16px;
   font-weight: bold;

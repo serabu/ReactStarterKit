@@ -1,6 +1,6 @@
-@import "/src/components/TestPage/colors";
+@import "/src/components/Styles/colors";
 
-.popupRent__container {
+.popupSale__container {
   position: relative;
   background-color: white;
   border-radius: 5px;
@@ -8,11 +8,11 @@
   font-size: 16px;
 }
 
-.popupRent__container::before{
+.popupSale__container::before{
   content: "";
     position: absolute;
     bottom: 100%;
-    left: 62%; 
+    left: 49%; 
     width: 0;
     height: 0;
     border-left: 16px solid transparent;
@@ -21,7 +21,7 @@
 }
 
 
-.popupRent__content {
+.popupSale__content {
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -35,17 +35,17 @@
 
 .select__property-types {
 
-  
+  border: none;
+  border-right: 1px solid #ccc;
 }
 
 .select__location {
-
   border: none;
   border-right: 1px solid #ccc;
 }
 
 .btn__search {
-  background-color: $btn-blue;
+  background-color: map-get($colors, btn-blue);
   color: #fff;
   font-size: 16px;
   font-weight: bold;

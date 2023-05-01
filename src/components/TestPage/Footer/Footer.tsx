@@ -1,9 +1,9 @@
 import "./Footer.scss";
-import * as img from "../../images/TestPage";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { Logo } from "../../Styles/Logo/logo";
 
 export const Footer = () => {
   return (
@@ -11,8 +11,8 @@ export const Footer = () => {
       <div className="footer__wrapper">
         <div className="footer__sub">
           <div className="footer__sub__title">
-            <h2 className="footer__sub__title__h1">Join Our Newsletter</h2>
-            <h3 className="footer__sub__title__h2">
+            <h2 className="footer__sub__title__h2">Join Our Newsletter</h2>
+            <h3 className="footer__sub__title__h3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               tempor incididunt
             </h3>
@@ -28,7 +28,9 @@ export const Footer = () => {
         </div>
         <div className="footer__container">
           <div className="footer__column">
-            <img className="footer__column__logo" src={img.logo}></img>
+            <div className="footer__column__logo">
+              <Logo />
+            </div>
             <ul className="footer__column__quote">
               <li>
                 Lorem ipsum amet, consectetur adipisicing elit, sed do eiusmod
@@ -37,16 +39,28 @@ export const Footer = () => {
             </ul>
             <ul className="footer__icons__wrapper">
               <li className="footer__column__icons">
-                <TelegramIcon fontSize="large" />
+                <a href="/">
+                  {" "}
+                  <TelegramIcon fontSize="large" />
+                </a>
               </li>
               <li className="footer__column__icons">
-                <WhatsAppIcon fontSize="large" />
+                <a href="/">
+                  {" "}
+                  <WhatsAppIcon fontSize="large" />
+                </a>
               </li>
               <li className="footer__column__icons">
-                <TwitterIcon fontSize="large" />
+                <a href="/">
+                  {" "}
+                  <TwitterIcon fontSize="large" />
+                </a>
               </li>
               <li className="footer__column__icons">
-                <InstagramIcon fontSize="large" />
+                <a href="/">
+                  {" "}
+                  <InstagramIcon fontSize="large" />
+                </a>
               </li>
             </ul>
           </div>
