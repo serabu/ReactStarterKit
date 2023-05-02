@@ -4,9 +4,9 @@ import { Logo } from "../../Styles/Logo/logo";
 export const Navigation = () => {
   return (
     <nav className="navigation">
-      <div className="logo">
+      <h1 className="logo">
         <Logo />
-      </div>
+      </h1>
       <ul className="menu">
         <li className="menu__item">
           Home

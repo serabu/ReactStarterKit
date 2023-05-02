@@ -6,37 +6,37 @@ import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 export const PopupStatus = () => {
   return (
-    <div className="popupStatus__container">
-      <div className="popupStatus__content">
-        <div className="popupStatus__icon">
+    <form className="popup__container">
+      <div className="popup__content">
+        <div className="popup__icon">
           <SearchIcon />
         </div>
         <input
           type="text"
           placeholder="NEIGGBORHOOD"
-          className="input__search"
+          className="popup__input-search"
         />
-        <div className="popupStatus__icon">
+        <div className="popup__icon">
           <BusinessCenterIcon />
         </div>
-        <select className="select__property-types">
+        <select className="popup__select__property">
           <option value="">PRORETY TYPES</option>
           
         </select>
-        <div className="popupStatus__icon">
+        <div className="popup__icon">
           <EditLocationIcon />
         </div>
-        <select className="select__location">
+        <select className="popup__select__location">
           <option value="">LOCATION</option>
           {}
         </select>
-        <div className="popupStatus__icon">
+        <div className="popup__icon">
           <MenuOpenIcon />
         </div>
-        <div className="btn__search-wrapper">
-        <button className="btn__search">Search</button>
+        <div className="popup__btnSearch-wrapper">
+        <button className="popup__btnSearch">Search</button>
         </div>
       </div>
-    </div>
+    </form>
   );
 };

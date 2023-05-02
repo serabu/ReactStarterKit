@@ -1,56 +1,76 @@
 @import "/src/components/Styles/colors";
 
-.popupStatus__container {
+.popup__container {
   position: relative;
   background-color: white;
   border-radius: 5px;
   margin-top: 20px;
   font-size: 16px;
+ 
+  @media screen and (max-width: 988px) {
+    border-radius: 0;
+    margin-top: 0;
+  }
 }
 
-.popupStatus__container::before {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 35%;
-  width: 0;
-  height: 0;
-  border-left: 16px solid transparent;
-  border-bottom: 16px solid white;
-  border-right: 16px solid transparent;
-}
 
-.popupStatus__content {
+.popup__content {
   display: flex;
   align-items: center; 
   padding: 10px;
+
+ 
+  @media screen and (max-width: 988px) {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    margin-top: 16px;
+  }
 }
 
-.input__search,
-.select__property-types,
-.select__location
+.popup__input-search,
+.popup__select__property,
+.popup__select__location
  {
   flex: 1; 
   border: none;
   border-right: $border-size;
+
+ 
+  @media screen and (max-width: 988px) {
+    border-right: none;
+    margin-bottom: 10px;
+  }
 }
 
-.input__search,
-.select__property-types,
-.select__location {
+.popup__input-search,
+.popup__select__property,
+.popup__select__location {
   padding: 10px; 
 }
 
-.btn__search {
+.popup__btnSearch {
   background-color: map-get($colors, btn-blue);
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
+  padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+
+  @media screen and (max-width: 988px) {
+    margin-top: 10px;
+    width: 100%;
+  }
 }
 
-.popupStatus__icon {
+.popup__icon {
   margin: 5px; 
-  
+
+
+  @media screen and (max-width: 988px) {
+    display: none;
+  }
 }

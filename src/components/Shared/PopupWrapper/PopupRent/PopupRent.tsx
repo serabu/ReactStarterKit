@@ -1,21 +1,33 @@
 import "./PopupRent.scss"; 
-
+import EditLocationIcon from "@mui/icons-material/EditLocation";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 export const PopupRent = () => {
   return (
-    <div className="popupRent__container">
-    <div className="popupRent__content">
-      <input type="text" placeholder="NEIGGBORHOOD" className="input__search" />
-      <select className="select__property-types">
-        <option value="">PRORETY TYPES</option>
-        
-      </select>
-      <select className="select__location">
-        <option value="">LOCATION</option>
-        
-      </select>
-      <button className="btn__search">Search</button>
-    </div>
-  </div>
+    <form className="popup__container">
+      <div className="popup__content">
+        <div className="popup__icon">
+          <BusinessCenterIcon />
+        </div>
+        <select className="popup__select__property">
+          <option value="">PRORETY TYPES</option>
+          
+        </select>
+        <div className="popup__icon">
+          <EditLocationIcon />
+        </div>
+        <select className="popup__select__location">
+          <option value="">LOCATION</option>
+          {}
+        </select>
+        <div className="popup__icon">
+          <MenuOpenIcon />
+        </div>
+        <div className="popup__btnSearch-wrapper">
+        <button className="popup__btnSearch">Search</button>
+        </div>
+      </div>
+    </form>
   );
 };

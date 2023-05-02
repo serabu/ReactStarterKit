@@ -7,21 +7,22 @@
     justify-content: center;
 
     & .popup__wrapper__button {
+      color: black;
       font-size: 16px;
-      width: 140px;
-      background-color: white;
-      color: rgba(62, 58, 58, 0.912);
-      padding: 10px;
-      border-style: hidden;
+      padding: 10px 15px;
+      border: none;
       border-radius: 5px;
+      cursor: pointer;
 
       &.active {
         background-color: map-get($colors, btn-blue);
+        color: white;
       }
     }
 
     & .popup__wrapper__button:hover {
       background-color: map-get($colors, btn-blue);
+      color: white;
     }
   }
 }
