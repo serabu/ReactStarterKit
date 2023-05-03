@@ -7,6 +7,7 @@
     justify-content: center;
 
     & .popup__wrapper__button {
+      position: relative;
       color: black;
       font-size: 16px;
       padding: 10px 15px;
@@ -17,6 +18,19 @@
       &.active {
         background-color: map-get($colors, btn-blue);
         color: white;
+        position: relative;
+      }
+
+      &.active:before {
+        content: "";
+        position: absolute;
+        top: 120%;
+        left: 34%;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-bottom: 20px solid rgb(255, 255, 255);
+        border-right: 20px solid transparent;
       }
     }
 
@@ -26,3 +40,5 @@
     }
   }
 }
+
+
