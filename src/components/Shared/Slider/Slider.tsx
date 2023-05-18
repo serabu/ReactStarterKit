@@ -155,3 +155,5 @@ export const Slider: React.FC<SliderProps> = ({ children, count = 4, dots = true
     </div>
   );
 };
+
+export default Slider;

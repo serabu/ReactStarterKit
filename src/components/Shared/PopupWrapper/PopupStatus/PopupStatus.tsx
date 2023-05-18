@@ -40,3 +40,5 @@ export const PopupStatus = () => {
     </form>
   );
 };
+
+export default PopupStatus;
